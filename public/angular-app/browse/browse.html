@@ -1,0 +1,21 @@
+<!-- <h1 class="browse"> Books </h1> -->
+
+<!-- number of books given is defined by the HomeController api/json request. The hotel-controllers.js in the api holder dictates the count  -->
+
+
+
+
+<section ng-repeat="book in vm.books" class="card mb-5" id="testBook">
+  <div class="card-block">
+    <h2 class="card-title"> {{ book.Title }}</h2>
+    <h5 class="card-subtitle"> {{ book.Author }}</h5>
+    <p class="card-text"> {{ book.Description }}</p>
+    <a class="card-link" ng-href="#!/book/{{ book._id }}">View Details</a>
+  </div>
+  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}"
+</section>
+
+
+
+
+<!-- Put cover on left and deets on right, make whole card a link-->

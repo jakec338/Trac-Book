@@ -1,0 +1,46 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+
+.homepage-img {
+  padding: 90px;
+}
+
+.padded {
+  padding-top: 30px
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+  background-color: #f5f5f5;
+  padding-top: 20px;
+}
+
+/*BROWSE PAGE*/
+.browse {
+  margin-left: 30px;
+}
+.btn a {color:#fff;}
+   /* overrides link button default colour change, White */
+.card {
+  margin: 30px;
+  padding: 30px;
+  margin-left: 30px;
+  margin-right: 100px;
+  background-color: #f4fffb;
+}
+/*#78C2AD*/
+.cover {
+  height: 300px;
+  width: 200px
+}
