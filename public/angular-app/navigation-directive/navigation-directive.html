@@ -24,10 +24,10 @@
 
         
 
-          <ul ng-if="vm.isLoggedIn()" class="form-inline my-2 my-lg-0">
-                <button ng-class="vm.isActiveTab('profile')" ng-if="vm.isLoggedIn()"><a href="#!/profile">Profile</a></button>
+          <form ng-if="vm.isLoggedIn()" class="form-inline my-2 my-lg-0" >
+                <button class="navbar-btn btn-sm btn-info"><a href="#!/profile">Profile</a></button>
                 <button class="navbar-btn btn-sm btn-info" ng-click="vm.logout()">Logout</button>
-            </ul>
+          </form>
 
         </div>
       </nav>
