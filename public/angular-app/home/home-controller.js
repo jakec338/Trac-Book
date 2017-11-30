@@ -1,10 +1,18 @@
 angular.module('myApp').controller('HomeController', HomeController);
 
-function HomeController($http) {
+function HomeController(bookDataFactory, $routeParams) {
   var vm = this;
   vm.title = 'Test';
-  $http.get('api/json').then(function(response){
+  vm.tags = 'Tags';
+  vm.genre = 'Genres';
+  console.log($routeParams.id);
+  bookDataFactory.bookList().then(function(response){
     console.log(response);
-    vm.books = response.data;
+    vm.books = response;
   })
 }
+
+
+
+
+// CUSTOM FILTER
