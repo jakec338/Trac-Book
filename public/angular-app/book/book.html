@@ -1,7 +1,7 @@
-
+<div>
 <section class="card mb-5" id="testBook">
   <div class="card-block">
-    <h2 class="card-title"> {{ vm.book.Title }}</h2>
+    <h2 class="card-title"> {{ vm.book.Title }} </h2>
     <h5 class="card-subtitle"> {{ vm.book.Author }}</h5>
     <p class="card-text"> {{ vm.book.Description }}</p>
 
@@ -9,11 +9,19 @@
     <!-- <p class="card-text"> {{ JSON.parse(vm.book.Genre); }}</p> -->
     <!-- gonna have to write a thing that serves up the parsed json, cant do it inline  -->
 
-  </div>
+</div>
   <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}"
 </section>
-
-
-<div>
-  <h2 class="text-center">Carousel of books like this one below</h2>
 </div>
+
+
+
+<!--- BULLSHIT FROM HERE -->
+<!--
+<div uib-carousel active="active" >
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="../images/Bookcovers/{{ vm.book.Cover }}" style="margin:auto;">
+        <div class="carousel-caption">
+          <p>{{slide.text}}</p>
+        </div>
+</div> -->

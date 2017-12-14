@@ -1,0 +1,25 @@
+{
+  "name": "mean",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "jakec338 <jakeconolly@hotmail.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jakec338/Trac-Book",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "~0.13.0"
+  },
+  "install": {
+    "path": "public/libs"
+  }
+}
