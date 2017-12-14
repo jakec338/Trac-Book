@@ -24,6 +24,12 @@ function config($httpProvider, $routeProvider) {
       controller: RegisterController,
       controllerAs: 'vm'
     })
+    .when('/register1', {
+      templateUrl: 'angular-app/register/registerAge.html'
+    })
+    .when('/register2', {
+      templateUrl: 'angular-app/register/registerGenre.html'
+    })
     .when('/login', {
       templateUrl: 'angular-app/login/login.html',
       controller: LoginController,

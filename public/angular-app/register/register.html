@@ -1,7 +1,14 @@
 
+<head>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <link href="css/custom.css" rel="stylesheet"/>
+</head>
+<body>
 <div class="container">
 <div class = "panel panel-default">
-    <div class="panel heading"> REGISTER </div>
+   <br/> <div class="panel heading"> REGISTER </div><br/>
 <div class="panel-body">
 
 <div ng-if="vm.message" class="alert alert-success" role="alert">
@@ -32,8 +39,10 @@
           <input type="password" class="form-control" id="password-repeat" placeholder="Password" ng-model="vm.passwordRepeat" autocapitalize="none">
         </div>
 
-        <button type="submit" class="btn btn-success">Register</button>
+        <button type="submit" class="browse-btn">Continue</button>
 </form>
 </div>
 </div>
 </div>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+</body>

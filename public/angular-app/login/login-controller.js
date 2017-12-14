@@ -21,12 +21,15 @@ function LoginController($http, $location, $window, AuthFactory, jwtHelper) {
       $http.post('/api/users/login', user).then(function(response) {
         console.log(response);
         if (response.data.success) {
-            vm.message = 'Congratulations! You are now signed in.';
+          //console.log("Success!");
+          //return res.redirect('/');
+          //$location.path('/');
           $window.sessionStorage.token = response.data.token;
           AuthFactory.isLoggedIn = true;
           var token = $window.sessionStorage.token;
           var decodedToken = jwtHelper.decodeToken(token);
           vm.loggedInUser = decodedToken.username;
+          $window.location.href = '#';
         }
       }).catch(function(error) {
         console.log(error);
