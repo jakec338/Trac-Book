@@ -19,7 +19,8 @@
     "jsonwebtoken": "^8.1.0",
     "mongodb": "^2.2.33",
     "mongoose": "^4.13.5",
-    "mongoose-type-email": "^1.0.5"
+    "mongoose-type-email": "^1.0.5",
+    "startbootstrap-1-col-portfolio": "^4.0.0-beta"
   },
   "devDependencies": {
     "mocha": "^4.0.1"

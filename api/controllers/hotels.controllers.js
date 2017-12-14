@@ -8,7 +8,7 @@ module.exports.hotelsGetAll = function(req, res) {
   //console.log('Requested by: ' + req.user);
 
   var offset = 0;    // start of array, not really an array though
-  var count = 10;    // number of results
+  var count = null;    // number of results
 
   if (req.query && req.query.offset) {
     offset = parseInt(req.query.offset, 10);     // dunno what the ten is about, dec place?

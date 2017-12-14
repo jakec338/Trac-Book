@@ -1,6 +1,6 @@
 angular.module('myApp').controller('RegisterController', RegisterController);
 
-function RegisterController($http) {
+function RegisterController($http, $window, AuthFactory) {
     var vm = this;
   
     vm.register = function() {
@@ -18,7 +18,8 @@ function RegisterController($http) {
         } else {
           $http.post('/api/users/register', user).then(function(result) {
             console.log(result);
-            vm.message = 'Successful registration, please login.';
+            AuthFactory.isLoggedIn = true;
+            $window.location.href = '#!/register1';
             vm.error = '';
           }).catch(function(error) {
             console.log(error);
