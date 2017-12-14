@@ -9,6 +9,10 @@ body {
   margin-bottom: 90px;
 }
 
+.container {
+  padding-top: 20px;
+}
+
 .homepage-img {
   padding: 90px;
 }
