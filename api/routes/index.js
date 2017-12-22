@@ -32,6 +32,7 @@ router
 .route('/users/register')
 .post(ctrlUsers.register);
 
+
 router
 .route('/users/login')
 .post(ctrlUsers.login);

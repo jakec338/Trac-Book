@@ -7,7 +7,9 @@ function RegisterController($http, $window, AuthFactory) {
       var user = {
         email: vm.email,
         username: vm.username,
-        password: vm.password
+        password: vm.password,
+        age: vm.age,
+        genres: vm.genres
       };
   
       if (!vm.email || !vm.username || !vm.password) {
@@ -19,7 +21,7 @@ function RegisterController($http, $window, AuthFactory) {
           $http.post('/api/users/register', user).then(function(result) {
             console.log(result);
             AuthFactory.isLoggedIn = true;
-            $window.location.href = '#!/register1';
+            $window.location.href = '#!/register2';
             vm.error = '';
           }).catch(function(error) {
             console.log(error);
@@ -28,4 +30,3 @@ function RegisterController($http, $window, AuthFactory) {
       }
     }
   };
-  

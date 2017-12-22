@@ -9,11 +9,15 @@ module.exports.register = function(req, res){
     var email = req.body.email;
     var username = req.body.username;
     var password = req.body.password;
+    var age = req.body.age;
+    var genres = req.body.genres || null;
 
     User.create({
         email: email,
         username: username,
-        password: bcrypt.hashSync(password, bcrypt.genSaltSync(10))
+        password: bcrypt.hashSync(password, bcrypt.genSaltSync(10)),
+        age: age,
+        genres: genres
     }, function(err, user){
         if(err){
             console.log(err);

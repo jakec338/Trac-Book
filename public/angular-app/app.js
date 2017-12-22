@@ -1,7 +1,7 @@
 angular.module('myApp', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
 function config($httpProvider, $routeProvider) {
-  $httpProvider.interceptors.push('AuthInterceptor');
+  $httpProvider.interceptors.push('AuthInterceptor');  
   
   $routeProvider
     .when('/', {
@@ -22,13 +22,14 @@ function config($httpProvider, $routeProvider) {
     .when('/register', {
       templateUrl: 'angular-app/register/register.html',
       controller: RegisterController,
-      controllerAs: 'vm'
-    })
-    .when('/register1', {
-      templateUrl: 'angular-app/register/registerAge.html'
+      controllerAs: 'vm',
+      //css: ['angular-app/register/register.css']
     })
     .when('/register2', {
-      templateUrl: 'angular-app/register/registerGenre.html'
+      templateUrl: 'angular-app/register/register2.html'
+    })
+    .when('/register3', {
+      templateUrl: 'angular-app/register/register3.html'
     })
     .when('/login', {
       templateUrl: 'angular-app/login/login.html',
@@ -40,6 +41,7 @@ function config($httpProvider, $routeProvider) {
   
     });
 }
+
 
 function run($rootScope, $location, $window, AuthFactory) {
   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
