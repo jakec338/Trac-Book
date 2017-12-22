@@ -1,3 +1,60 @@
+<<<<<<< HEAD
+<div>
+<label for="singleSelect"> Search by Genre: </label><br>
+   <select name="singleSelect" id="singleSelect" ng-model="genre.search" ng-init="count=10">
+     <option value="">  All  </option> <!-- not selected / blank option -->
+     <option value="science fiction">Science Fiction</option> <!-- interpolation -->
+     <option value="action">Action</option>
+     <option value="fantasy">Fantasy</option>
+   </select>
+</div>
+
+<!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
+
+<div>
+<label for="singleSelect"> Search by Tag: </label><br>
+   <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
+     <option value="">  All  </option> <!-- not selected / blank option -->
+     <option value="magic">Magic</option> <!-- interpolation -->
+     <option value="classic">Classic</option>
+     <option value="strong">Strong Female Characters</option>
+   </select>
+</div>
+
+<div>
+  <label>Search by Title: <input ng-model="title.search" ng-init="count=10"></label>
+</div>
+
+<div>
+  <label>Search by Author: <input ng-model="author.search" ng-init="count=10"></label>
+</div>
+
+<!-- IF NO RESULTS SHOW 'NO RESULTS'-->
+
+<div>
+<section ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count" class="card mb-5" id="testBook">
+  <div class="card-block">
+    <h2 class="card-title"> {{ book.Title }} {{ data.singleSelect }}</h2>
+    <h5 class="card-subtitle"> {{ book.Author }}</h5>
+    <p class="card-text"> {{ book.Description }}</p>
+    <p class="card-text"> {{ book.Genre }}</p>
+    <p class="card-text"> {{ book.Tags }}</p>
+    <a class="card-link" ng-href="#!/book/{{ book._id }}">View Details</a>
+  </div>
+  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}"
+</section>
+</div>
+
+
+
+<div>
+  <button ng-click="count = count + 10" ng-init="count=10">MORE RESULTS</button>
+</div>
+
+
+
+<!-- Put cover on left and deets on right, make whole card a link-->
+=======
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -82,3 +139,4 @@
   <!-- Put cover on left and deets on right, make whole card a link-->
 </div>
 </body>
+>>>>>>> origin/master

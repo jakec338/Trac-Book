@@ -11,3 +11,8 @@ function HomeController(bookDataFactory, $routeParams) {
     vm.books = response;
   })
 }
+
+
+
+
+// CUSTOM FILTER
