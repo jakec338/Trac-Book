@@ -25,12 +25,6 @@ function config($httpProvider, $routeProvider) {
       controllerAs: 'vm',
       //css: ['angular-app/register/register.css']
     })
-    .when('/register2', {
-      templateUrl: 'angular-app/register/register2.html'
-    })
-    .when('/register3', {
-      templateUrl: 'angular-app/register/register3.html'
-    })
     .when('/login', {
       templateUrl: 'angular-app/login/login.html',
       controller: LoginController,
@@ -38,7 +32,6 @@ function config($httpProvider, $routeProvider) {
     })
     .when('/profile', {
       templateUrl: 'angular-app/profile/profile.html',
-  
     });
 }
 

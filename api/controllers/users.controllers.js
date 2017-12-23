@@ -10,7 +10,7 @@ module.exports.register = function(req, res){
     var username = req.body.username;
     var password = req.body.password;
     var age = req.body.age;
-    var genres = req.body.genres || null;
+    var genres = req.body.genres;
 
     User.create({
         email: email,

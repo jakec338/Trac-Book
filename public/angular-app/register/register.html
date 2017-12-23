@@ -1,96 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
 <head>
-    
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    
     <link href="css/custom.css" rel="stylesheet"/>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 </head>
+
 <body>
 <div class="container">
 <div class = "panel panel-default">
-   <br/> <div class="panel heading"> REGISTER </div><br/>
 <div class="panel-body">
 
-<div ng-if="vm.message" class="alert alert-success" role="alert">
-  <p>{{ vm.message }}</p>
-</div>
 
-<div ng-if="vm.error" class="alert alert-danger" role="alert">
-  {{ vm.error }}
-</div>
 
-<form ng-hide="vm.message" name="register" ng-submit="vm.register()">
+<form ng-hide="vmForm.message" ng-submit="vmForm.register()" ng-controller="RegisterController as vmForm">
+    <div ng-if="vmForm.message" class="alert alert-success" role="alert">
+        <p>{{ vm.message }}</p>
+      </div>
+      
+      <div ng-if="vmForm.error" class="alert alert-danger" role="alert">
+        {{ vm.error }}
+      </div>
+
+    <div ng-switch="vmForm.step">
+    <div class="stepone" ng-switch-when="one" >
+        <h3>REGISTER</h3>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Email" ng-model="vm.email" autocapitalize="none">
+          <input type="email" class="form-control" id="email" placeholder="Email" ng-model="vmForm.email"  autocapitalize="none">
         </div>
 
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="username" class="form-control" id="username" placeholder="Username" ng-model="vm.username" autocapitalize="none">
+          <input type="username" class="form-control" id="username" placeholder="Username"  ng-model="vmForm.username" autocapitalize="none">
         </div>
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password" ng-model="vm.password" autocapitalize="none">
+          <input type="password" class="form-control" id="password" placeholder="Password" ng-model="vmForm.password" autocapitalize="none">
         </div>
         <div class="form-group">
           <label for="password-repeat">Repeat Password</label>
-          <input type="password" class="form-control" id="password-repeat" placeholder="Password" ng-model="vm.passwordRepeat" autocapitalize="none">
+          <input type="password" class="form-control" id="password-repeat" placeholder="Password"  ng-model="vmForm.passwordRepeat" autocapitalize="none">
         </div>
+        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepTwo()" >Continue</button>
+    </div>
 
-       <!--<div><input type="radio" ng-model="vm.age" id="age" value="12+">12+</div><br/>
-        <div><input type="radio" ng-model="vm.age" id="age" value="14+">14+</div><br/>
-        <div><input type="radio" ng-model="vm.age" id="age" value="16+">16+</div><br/>
-        <div>
-        <select ng-model="vm.genres" id="genres" multiple>
-        <option value="science fiction" >Science Fiction</option>
-        <option value="action"   >Action</option> 
-        <option value="fantasy" >Fantasy</option>
-        <option value="realistic" >Realistic</option> 
-        <option value="historical" >Historical</option> 
-        <opton value="mystery"   >Mystery</option>
+    <div class="steptwo" ng-switch-when="two">
+        <h3>AGE</h3>
+        <div class="form-group">
+        <div><input type="radio" ng-model="vmForm.age" id="age" value="12+">12+</div><br/>
+        <div><input type="radio" ng-model="vmForm.age" id="age" value="14+">14+</div><br/>
+        <div><input type="radio" ng-model="vmForm.age" id="age" value="16+">16+</div><br/>
+        </div>
+        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepOne()" >Back</button>
+        <button type="button" class="btn btn-primary" ng-click="vmForm.stepThree()">Continue</button>
+    </div>
+
+    <div class="stepthree" ng-switch-when="three">
+        <h3>GENRES</h3>
+        
+        <select ng-model="vmForm.genres" id="genres" multiple>
+        <option value="science fiction">Science Fiction</option>
+        <option value="action" >Action</option> 
+        <option value="fantasy">Fantasy</option>
+        <option value="realistic">Realistic</option> 
+        <option value="historical">Historical</option> 
+        <option value="mystery" >Mystery</option>
         </select>
-      </div>-->
-      <button type="submit" class="browse-btn">Continue</button>
+        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepTwo()" >Back</button>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+    </div>
    </form>    
-
-<!--
-  <div class = "panel panel-default">
-      <br/> <div class="panel heading">  Age: </div><br/>
-  <div class="panel-body">
-    <form>
-      <div><input type="radio" ng-model="age" value="12+">12+</div><br/>
-      <div><input type="radio" ng-model="age" value="14+">14+</div><br/>
-      <div><input type="radio" ng-model="age" value="16+">16+</div><br/>
-      <button type="button" class="browse-btn"><a ng-href="#!/register2">Continue</a></button>
-    </form>
-  </div>
-  </div>
- 
-    <div class = "panel panel-default">
-        <br/><div class="panel heading"> Choose your favourite genres: </div><br/>
-    <div class="panel-body">
-      <form>
-        <label><input type="checkbox" ng-model="genre.sciencefiction" />Science Fiction</label> <br /><br/>
-        <label><input type="checkbox" ng-model="student.action" />Action</label> <br /><br />
-        <label><input type="checkbox"  ng-model="student.fantasy" />Fantasy</label><br /><br />
-        <label><input type="checkbox" ng-model="genre.realistic" />Realistic</label> <br /><br/>
-        <label><input type="checkbox" ng-model="student.historical" />Historical</label> <br /><br/>
-        <label><input type="checkbox"  ng-model="student.mystery" />Mystery</label><br /><br />
-        <button type="button" class="browse-btn"><a ng-href="#">Submit</a></button>
-      </form>
-    </div>
-    </div>
-    <button type="submit" class="browse-btn">Continue</button> 
-
-</div>-->
-
-
-
 </div>
 </div>
 
-
-
-<script src="jquery/jquery-3.2.1.min.js"></script>
 </body>
+</html>

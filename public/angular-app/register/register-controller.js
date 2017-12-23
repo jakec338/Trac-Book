@@ -1,7 +1,28 @@
+
+
 angular.module('myApp').controller('RegisterController', RegisterController);
 
 function RegisterController($http, $window, AuthFactory) {
     var vm = this;
+    vm.step="one"; 
+
+    vm.stepOne=stepOne;
+
+    function stepOne(){
+      vm.step="one";
+    }
+
+    vm.stepTwo=stepTwo;
+
+    function stepTwo(){
+      vm.step="two";
+    }
+
+    vm.stepThree=stepThree;
+    
+        function stepThree(){
+          vm.step="three";
+        }
   
     vm.register = function() {
       var user = {
@@ -21,7 +42,7 @@ function RegisterController($http, $window, AuthFactory) {
           $http.post('/api/users/register', user).then(function(result) {
             console.log(result);
             AuthFactory.isLoggedIn = true;
-            $window.location.href = '#!/register2';
+            $window.location.href = '#';
             vm.error = '';
           }).catch(function(error) {
             console.log(error);
