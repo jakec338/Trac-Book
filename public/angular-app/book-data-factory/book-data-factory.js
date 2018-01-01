@@ -22,8 +22,4 @@ function bookDataFactory($http){
   function fail(error){
     console.log(error.statusText);
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
