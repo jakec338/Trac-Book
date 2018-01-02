@@ -6,11 +6,32 @@ html {
 }
 body {
   /* Margin bottom by footer height */
+  padding-top: 54px;
   margin-bottom: 90px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.container {
+  padding-top: 20px;
 }
 
 .homepage-img {
   padding: 90px;
+}
+
+.home-btn{
+  border-radius: 12px;
+  background-color: rgb(228, 219, 211); /* Green */
+  border: none;
+  color: rgb(61, 101, 160);
+  padding: 5px 90px;
+  text-align: center;
+  font-size: 25px;
 }
 
 .padded {
@@ -30,8 +51,31 @@ body {
 .browse {
   margin-left: 30px;
 }
-.btn a {color:#fff;}
-   /* overrides link button default colour change, White */
+
+.browse-btn {
+    border-radius: 12px;
+    background-color: rgb(228, 219, 211); /* Green */
+    border: none;
+    color: rgb(12, 7, 5);
+    padding: 5px 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.navbar-btn {
+  border-radius: 2px;
+  background-color: rgb(228, 219, 211); /* Green */
+  border: black;
+  color: rgb(12, 7, 5);
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.browse{
+  color: white ;
+}
+
 .card {
   margin: 30px;
   padding: 30px;

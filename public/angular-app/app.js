@@ -1,7 +1,8 @@
-angular.module('myApp', ['ngRoute'])
-.config(config);
+angular.module('myApp', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
-function config($routeProvider) {
+function config($httpProvider, $routeProvider) {
+  $httpProvider.interceptors.push('AuthInterceptor');  
+  
   $routeProvider
     .when('/', {
       templateUrl: 'angular-app/home/home.html',
@@ -17,5 +18,29 @@ function config($routeProvider) {
       templateUrl: 'angular-app/browse/browse.html',
       controller: HomeController,
       controllerAs: 'vm'
+    })
+    .when('/register', {
+      templateUrl: 'angular-app/register/register.html',
+      controller: RegisterController,
+      controllerAs: 'vm',
+      //css: ['angular-app/register/register.css']
+    })
+    .when('/login', {
+      templateUrl: 'angular-app/login/login.html',
+      controller: LoginController,
+      controllerAs: 'vm'
+    })
+    .when('/profile', {
+      templateUrl: 'angular-app/profile/profile.html',
     });
+}
+
+
+function run($rootScope, $location, $window, AuthFactory) {
+  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+    if (nextRoute.access !== undefined && nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
+      event.preventDefault();
+      $location.path('/');
+    }
+  });
 }

@@ -3,7 +3,7 @@ var router  = express.Router();
 
 var ctrlHotels = require('../controllers/hotels.controllers.js');
 var ctrlAuths = require('../controllers/authors.controllers.js');
-
+var ctrlUsers = require ('../controllers/users.controllers.js');
 
 
 router
@@ -26,6 +26,16 @@ router
 router
   .route('/json/:hotelId/author/:authorId')
   .get(ctrlAuths.authsGetOne);
+
+//Authentication
+router
+.route('/users/register')
+.post(ctrlUsers.register);
+
+
+router
+.route('/users/login')
+.post(ctrlUsers.login);
 
 
 module.exports = router;

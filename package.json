@@ -1,21 +1,41 @@
 {
   "name": "mean",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"\"",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "\"\"",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-jwt": "^0.1.9",
+    "angular-route": "^1.6.7",
+    "angular-ui-router": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.13.2"
+    "mongoose": "^4.13.5",
+    "mongoose-type-email": "^1.0.5",
+    "startbootstrap-1-col-portfolio": "^4.0.0-beta"
   },
   "devDependencies": {
     "mocha": "^4.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakec338/Trac-Book.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "bugs": {
+    "url": "https://github.com/jakec338/Trac-Book/issues"
+  },
+  "homepage": "https://github.com/jakec338/Trac-Book#readme"
 }
