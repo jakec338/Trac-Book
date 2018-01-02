@@ -1,19 +1,61 @@
-<!-- <h1 class="browse"> Books </h1> -->
+<div>
+<label for="singleSelect"> Search by Genre: </label><br>
+   <select name="singleSelect" id="singleSelect" ng-model="genre.search" ng-init="count=10">
+     <option value="">  All  </option> <!-- not selected / blank option -->
+     <option value="science fiction">Science Fiction</option> <!-- interpolation -->
+     <option value="action">Action</option>
+     <option value="fantasy">Fantasy</option>
+   </select>
+</div>
 
-<!-- number of books given is defined by the HomeController api/json request. The hotel-controllers.js in the api holder dictates the count  -->
+<!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
 
+<div>
+<label for="singleSelect"> Search by Tag: </label><br>
+   <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
+     <option value="">  All  </option> <!-- not selected / blank option -->
+     <option value="magic">Magic</option> <!-- interpolation -->
+     <option value="classic">Classic</option>
+     <option value="strong">Strong Female Characters</option>
+   </select>
+</div>
 
+<div>
+  <label>Search by Title: <input ng-model="title.search" ng-init="count=10"></label>
+</div>
 
+<div>
+  <label>Search by Author: <input ng-model="author.search" ng-init="count=10"></label>
+</div>
 
-<section ng-repeat="book in vm.books" class="card mb-5" id="testBook">
+<!-- IF NO RESULTS SHOW 'NO RESULTS'-->
+<!-- INSTEAD OF CHANGING DATABASE COULD JUST DO A REGEX ON THE LIST OF TAGS /GENRES AND ITERATE THROUGH THEM AND ADD ANCHOR TO EACH??? -->
+
+<div>
+<section ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count" class="card mb-5" id="testBook">
   <div class="card-block">
-    <h2 class="card-title"> {{ book.Title }}</h2>
+    <h2 class="card-title"> {{ book.Title }} {{ data.singleSelect }}</h2>
     <h5 class="card-subtitle"> {{ book.Author }}</h5>
     <p class="card-text"> {{ book.Description }}</p>
+    <p class="card-text">{{ book.Genre }}</p>
+    <p class="card-text"> {{ book.Tags }}</p>
+     <!-- get list from results here -->
     <a class="card-link" ng-href="#!/book/{{ book._id }}">View Details</a>
+    <script>
+      var genreSting = {{ book.Genre }}
+      console.log(genreSting);
+    </script>
   </div>
   <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}"
 </section>
+</div>
+
+
+
+<div>
+  <button ng-click="count = count + 10" ng-init="count=10"> {{count}} MORE RESULTS</button>
+</div>
+
 
 
 
