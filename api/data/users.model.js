@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 require('mongoose-type-email');
+var jwt = require('jsonwebtoken');
 
 var userSchema = new mongoose.Schema({
     username: {
@@ -25,5 +26,6 @@ var userSchema = new mongoose.Schema({
   }
 
 });
+
 
 mongoose.model('User', userSchema);
