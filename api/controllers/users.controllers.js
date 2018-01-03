@@ -24,6 +24,7 @@ module.exports.register = function(req, res){
             res.status(400).json(err);
         } else {
             console.log('user created', user);
+            
             res.status(201).json(user);
         }
     });
@@ -66,7 +67,8 @@ module.exports.authenticate = function( req, res, next){
                 console.log(error);
                 res.status(401).json('Unauthorized');
             } else{
-                req.user = decoded.username;
+                req.user= decoded.username;
+                //req.email = decoded.email;
                 next();
             }
         });

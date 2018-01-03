@@ -8,7 +8,7 @@ var ctrlUsers = require ('../controllers/users.controllers.js');
 
 router
   .route('/json')
-  .get(ctrlHotels.hotelsGetAll);
+  .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll);
 
 router
   .route('/json/:hotelId')
@@ -25,7 +25,7 @@ router
 
 router
   .route('/json/:hotelId/author/:authorId')
-  .get(ctrlAuths.authsGetOne);
+  .get( ctrlAuths.authsGetOne);
 
 //Authentication
 router
