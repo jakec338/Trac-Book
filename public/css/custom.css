@@ -62,6 +62,10 @@ body {
     font-size: 16px;
 }
 
+.navbar {
+  background-color:rgb(228, 219, 211);
+}
+
 .navbar-btn {
   border-radius: 2px;
   background-color: rgb(228, 219, 211); /* Green */
@@ -71,6 +75,9 @@ body {
   text-align: center;
   font-size: 16px;
 }
+
+.btn a {color:#fff;}
+   /* overrides link button default colour change, White */
 
 .browse{
   color: white ;
