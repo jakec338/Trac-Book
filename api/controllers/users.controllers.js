@@ -76,3 +76,20 @@ module.exports.authenticate = function( req, res, next){
         res.status(403).json('No token provided');
     }
 };
+
+module.exports.myprofile = function (req, res) {
+    console.log('Requested by: ' + req.user);
+
+    User.findOne({
+        username: req.user
+    }).exec(function (err, user) {
+        if (err) {
+            console.log(err);
+            res.status(400).json(err);
+        } else {
+            console.log('test');
+            res.status(200).json({ success: true, user: user });
+        }
+
+    })
+};
