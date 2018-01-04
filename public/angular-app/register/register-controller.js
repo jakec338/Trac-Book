@@ -2,7 +2,7 @@
 
 angular.module('myApp').controller('RegisterController', RegisterController);
 
-function RegisterController($http, $window, AuthFactory) {
+function RegisterController($http, $window, AuthFactory, $rootScope) {
     var vm = this;
     vm.step="one"; 
 
@@ -44,6 +44,7 @@ function RegisterController($http, $window, AuthFactory) {
             AuthFactory.isLoggedIn = true;
             $window.location.href = '#';
             vm.error = '';
+            $rootScope.$broadcast('login', vm);
           }).catch(function(error) {
             console.log(error);
           });

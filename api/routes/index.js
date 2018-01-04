@@ -8,7 +8,7 @@ var ctrlUsers = require ('../controllers/users.controllers.js');
 
 router
   .route('/json')
-  .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll);
+  .get(ctrlHotels.hotelsGetAll);
 
 router
   .route('/json/:hotelId')
@@ -37,5 +37,9 @@ router
 .route('/users/login')
 .post(ctrlUsers.login);
 
+
+router
+.route('/users/myprofile')
+.get(ctrlUsers.authenticate, ctrlUsers.myprofile);
 
 module.exports = router;
