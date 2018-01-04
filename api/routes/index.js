@@ -8,8 +8,8 @@ var ctrlUsers = require ('../controllers/users.controllers.js');
 
 router
   .route('/json')
-  .get(ctrlUsers.authenticate, ctrlHotels.hotelsGetAll);
-
+  .get(ctrlHotels.hotelsGetAll);
+  //  adding ctrlUsers.authenticate   means you cannot access browse function on my machine
 router
   .route('/json/:hotelId')
   .get(ctrlHotels.hotelsGetOne);
