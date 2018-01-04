@@ -1,52 +1,45 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-  <title>Title</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- using minty from bootswatch -->
-  <link href="css/custom.css" rel="stylesheet"/>
-
+    <title>Title</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- using minty from bootswatch -->
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
-
 <body>
-
-<ma-navigation></ma-navigation>
-
+    <ma-navigation></ma-navigation>
     <div ng-view></div>
 
 
+    <footer class="footer">
+        <div class="container">
+            <!-- <p class="text-muted text-center">
+              <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png" height="26" alt="Full Stack Training"/></a>
+            </p> -->
+            <p class="text-muted text-center">
+                <small>&copy; Book by TRAC</small>
+            </p>
+        </div>
+    </footer>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/home/home-controller.js"></script>
+    <script src="angular-app/book/book-controller.js"></script>
+    <script src="angular-app/profile/profile-controller.js"></script>
+    <script src="angular-app/register/register-controller.js"></script>
+    <script src="angular-app/login/login-controller.js"></script>
+    <script src="angular-app/auth/auth-factory.js"></script>
+    <script src="angular-app/auth/auth-interceptor.js"></script>
+    <script src="angular-app/navigation-directive/navigation-directive.js"></script>
+    <script src="angular-app/book-data-factory/book-data-factory.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
-  <footer class="footer">
-  <div class="container">
-    <!-- <p class="text-muted text-center">
-      <a href="http://fullstacktraining.com" target="_blank"><img src="/images/fullstacktraining_logo.png" height="26" alt="Full Stack Training"/></a>
-    </p> -->
-
-    <p class="text-muted text-center">
-      <small>&copy; Book by TRAC</small>
-    </p>
-  </div>
-</footer>
-
-  <script src="jquery/jquery-3.2.1.min.js"></script>
-  <script src="node_modules/angular/angular.js"></script>
-  <script src="node_modules/angular-route/angular-route.js"></script>
-  <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
-  <script src="angular-app/app.js"></script>
-  <script src="angular-app/home/home-controller.js"></script>
-  <script src="angular-app/book/book-controller.js"></script>
-  <script src="angular-app/register/register-controller.js"></script>
-  <script src="angular-app/login/login-controller.js"></script>
-  <script src="angular-app/auth/auth-factory.js"></script>
-  <script src="angular-app/auth/auth-interceptor.js"></script>
-  <script src="angular-app/navigation-directive/navigation-directive.js"></script>
-  <script src="angular-app/book-data-factory/book-data-factory.js"></script>
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-  
 </body>
 </html>

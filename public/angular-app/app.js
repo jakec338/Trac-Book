@@ -9,7 +9,7 @@ function config($httpProvider, $routeProvider) {
       controller: HomeController,
       controllerAs: 'vm',
       access:{
-        restricted: false
+        restricted: true
       }
     })
     .when('/book/:id', {
@@ -46,7 +46,9 @@ function config($httpProvider, $routeProvider) {
       }
     })
     .when('/profile', {
-      templateUrl: 'angular-app/profile/profile.html',
+        templateUrl: 'angular-app/profile/profile.html',
+        controller: ProfileController,
+        controllerAs: 'vm',
       access:{
         restricted: true
       }
@@ -61,7 +63,7 @@ function run($rootScope, $location, $window, AuthFactory) {
   $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
     if (nextRoute.access !== undefined && nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
       event.preventDefault();
-      $location.path('/');
+      $location.path('/login');
     }
   });
 }

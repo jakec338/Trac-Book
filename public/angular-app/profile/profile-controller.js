@@ -1,15 +1,10 @@
-/*angular.module('myApp').controller('ProfileController', ProfileController);
+angular.module('myApp').controller('ProfileController', ProfileController);
 
-function ProfileController($location, meanData) {
+function ProfileController($location, $http) {
     var vm = this;
-  
-    vm.users = {};
-  
-    meanData.getProfile()
-      .success(function(data) {
-        vm.users = data;
-      })
-      .error(function (e) {
-        console.log(e);
-      });
-  }*/
+    $http.get('/api/users/myprofile').then(function (response) {
+        if (response.status === 200) {
+            vm.User = response.data.user;
+        }
+    });
+}
