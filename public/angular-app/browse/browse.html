@@ -1,11 +1,35 @@
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <!-- icon library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Link the fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+   <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <![endif]-->
+   <link href="css/bootstrap.min.css" rel="stylesheet"/>
+   
+   <link href="css/styles.min.css" rel="stylesheet"/>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="/jquery/jquery.validate.min.js"></script>
+   <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-51910192-1', 'tracbook.com');
+   ga('send', 'pageview');
+ </script>
     
-    <link href="css/custom.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="container ng-scope">
@@ -58,7 +82,10 @@
                 <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
                 <h5> {{ book.Author }}</h5>
                 <p > {{ book.Description }}</p>
-                <p > {{ book.Genre }}</p>
+                <p >
+                  <b>Genre: </b>
+                   {{ book.Genre }}
+                  </p>
                 <p > {{ book.Tags }}</p>
                 <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
            
@@ -85,3 +112,4 @@
   <!-- Put cover on left and deets on right, make whole card a link-->
 </div>
 </body>
+</html>

@@ -10,11 +10,17 @@ body {
   margin-bottom: 90px;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.99px) {  }
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.99px) { }
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.99px) {  }
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.99px) {  }
 
 .container {
   padding-top: 20px;
