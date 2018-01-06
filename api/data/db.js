@@ -1,11 +1,12 @@
 // Mongoose connection file
 
 var mongoose = require('mongoose');
+var mongojs = require('mongojs');
 
-var dburl = 'mongodb://localhost:27017/myDb';
+// var dburl = 'mongodb://localhost:27017/myDb';
+var dburl = 'mongodb://jakec338:tasha9@ds032887.mlab.com:32887/books';
 
-
-mongoose.connect(dburl);
+mongoose.connect(process.env.MONGO_URL || dburl);
 
 mongoose.connection.on('connected', function(){
   console.log("Mongoose connected to " + dburl);

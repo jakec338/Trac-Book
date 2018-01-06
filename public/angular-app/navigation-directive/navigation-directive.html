@@ -19,8 +19,10 @@
           </ul>
 
           <form ng-if="!vm.isLoggedIn()" class="form-inline my-2 my-lg-0">
-            <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('register')" ng-if="!vm.isLoggedIn()" href="#!/register">Register</a>
-            <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('login')" ng-if="!vm.isLoggedIn()" href="#!/login">Login</a>
+            <!-- <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('register')" ng-if="!vm.isLoggedIn()" href="#!/register">Register</a> -->
+            <button type="button" class="btn btn-secondary" ng-class="vm.isActiveTab('register')"  ng-if="!vm.isLoggedIn()"><a ng-href="#!/register">Register</a></button>
+            <button type="button" class="btn btn-secondary" ng-class="vm.isActiveTab('login')"  ng-if="!vm.isLoggedIn()"><a ng-href="#!/login">Login</a></button>
+            <!-- <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('login')" ng-if="!vm.isLoggedIn()" href="#!/login">Login</a> -->
         </form>
 
 

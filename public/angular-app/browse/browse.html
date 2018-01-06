@@ -30,6 +30,7 @@
 
 <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
 <!-- INSTEAD OF CHANGING DATABASE COULD JUST DO A REGEX ON THE LIST OF TAGS /GENRES AND ITERATE THROUGH THEM AND ADD ANCHOR TO EACH??? -->
+<!-- pipes for tags and genres ????-->
 
 <div>
 <section ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count" class="card mb-5" id="testBook">

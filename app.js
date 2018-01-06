@@ -29,7 +29,7 @@ app.get('/json', function(req, res){
   res.json( {"test" : true} );
 });
 
-app.get('/test', function(req, res){
+app.get('/tes', function(req, res){
   console.log("GET json");
   res.json( {"test" : true} );
 });

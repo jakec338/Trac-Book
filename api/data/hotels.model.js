@@ -21,4 +21,4 @@ var schema = new mongoose.Schema({
   }
 });
 
-mongoose.model('ModelName', schema, 'myCollection');   // unsure why no collection 
+mongoose.model('ModelName', schema, 'books');   // unsure why no collection 

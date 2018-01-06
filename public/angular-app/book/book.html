@@ -5,13 +5,18 @@
     <h5 class="card-subtitle"> {{ vm.book.Author }}</h5>
     <p class="card-text"> {{ vm.book.Description }}</p>
     <button type="button" class="btn btn-secondary">Add to wish list</button>
+    <button type="button" class="btn btn-secondary"><a ng-href="{{vm.book.AmazonUK}}">Amazon</a></button>
+    <button type="button" class="btn btn-secondary"><a ng-href="{{vm.book.WorldCat}}">WorldCat</a></button>
+    <button type="button" class="btn btn-secondary"><a ng-href="#!/test">Test Page</a></button>
+
+
 
 
     <!-- <p class="card-text"> {{ JSON.parse(vm.book.Genre); }}</p> -->
     <!-- gonna have to write a thing that serves up the parsed json, cant do it inline  -->
 
   </div>
-  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}"
+  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}">
 </section>
 
 
