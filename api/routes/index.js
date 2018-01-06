@@ -38,4 +38,8 @@ router
 .post(ctrlUsers.login);
 
 
+router
+.route('/users/myprofile')
+.get(ctrlUsers.authenticate, ctrlUsers.myprofile);
+
 module.exports = router;

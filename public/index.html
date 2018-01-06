@@ -2,7 +2,7 @@
 <html ng-app="myApp">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="">
     <meta name="author" content="">
   <title>Title</title>
@@ -18,13 +18,9 @@
 <body>
 
 <ma-navigation></ma-navigation>
+<div ng-view></div>
 
-    <div ng-view></div>
-
-
-
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
 
 
@@ -41,6 +37,7 @@
   <script src="angular-app/app.js"></script>
   <script src="angular-app/home/home-controller.js"></script>
   <script src="angular-app/book/book-controller.js"></script>
+  <script src="angular-app/profile/profile-controller.js"></script>
   <script src="angular-app/register/register-controller.js"></script>
   <script src="angular-app/login/login-controller.js"></script>
   <script src="angular-app/auth/auth-factory.js"></script>

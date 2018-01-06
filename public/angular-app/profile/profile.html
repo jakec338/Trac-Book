@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <div class="container">
   <div class = "panel panel-default">
   <h1 class="text-center">MY ACCOUNT</h1>
@@ -7,20 +9,19 @@
   <form>
           <div class="form-group">
             <label for="email">Email</label>
+            <div>{{vm.User.email}}</div>
           </div>
 
           <div class="form-group">
             <label for="username">Username </label>
-          </div>
-
-          <div class="form-group">
-            <label for="password">Password/ Change Password</label>
+            <div>{{vm.User.username}}</div>
           </div>
   
+  
   </form>
-
-  <h2 class="text-center">MY READING LIST</h2>
-  <h3 class="text-center">Carousel of books</h3>
+  
+  
   </div>
   </div>
   </div>
+</html>

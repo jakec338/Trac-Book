@@ -1,0 +1,175 @@
+header, section, footer, aside, nav, main, article, figure{display:block;}
+#header{height:65px;}
+.container{margin-top:0px;padding-top:0px;}
+.container-fluid{margin:0px;padding:0px;}
+.panel, .panel-body, .panel-default{border:0;outline:0;-webkit-box-shadow:none;box-shadow:none;padding-bottom:0px;margin-bottom:0px}
+#main-banner{padding:0px 0px;height:500px;background-image:url("../files/images/NewImages/MainBanner2.jpg");background-repeat:no-repeat;background-position:left top;background-size:100%;position:relative;}
+.content h1{background-color:rgba(0,0,0,0.3);padding:10px;margin-top:200px;text-align:center;color:white;text-shadow:0px 0px 20px #000000;}
+#reading_lists{padding:30px 0px 40px 0px;background-color:#fffdf4;}
+#about_us{padding:30px 0px 40px 10px;}
+#donate{background-image:url("../files/images/NewImages/DonateBackground.png");padding:30px 0px;-webkit-box-shadow:inset 0 5px 6px -5px #acacac;-moz-box-shadow:inset 0 5px 6px -5px #acacac;box-shadow:inset 0 5px 6px -5px #acacac;}
+#projects{padding:30px 0px 30px 0px;}
+#quote{background-image:url("../files/images/NewImages/QuoteBackground.png");min-height:200px;background-size:100%;padding:30px 10px;}
+#contact_us{background-color:#fffdf4;padding:30px 0px 40px 0px;}
+.book{margin-top:50px;}
+.book:last-of-type{margin-bottom:50px;}
+.list{background-image:url("../files/images/NewImages/QuoteBackground.png");background-size:auto 100%;padding:30px 0px;}
+.list h2{font-size:28px;color:white;margin-bottom:30px;}
+.list p{max-width:700px;margin-left:auto;margin-right:auto;padding:5px;color:white;}
+.book-index{display:inline-block;text-decoration:none;margin:20px;-webkit-box-shadow:3px 3px 5px #acacac;-moz-box-shadow:3px 3px 5px #acacac;box-shadow:3px 3px 5px #acacac;}
+#success{height:500px;padding:30px 0px;}
+#success h2{margin-top:50px;}
+#members{margin-bottom:60px;}
+.member-description:first-child{margin-top:40px;}
+.member-description{margin-top:60px;margin-bottom:30px;}
+.member-description .col-sm-3 h2{margin:0px;}
+.member-description .col-sm-3 h5{margin-bottom:0px;}
+footer{background-color:#ebebeb;padding:40px 0px;}
+h1{font-family:Verdana, Geneva, sans-serif;font-size:50px;font-style:normal;font-variant:normal;font-weight:500;line-height:60px;color:#e65c00;}
+h2{font-family:Verdana, Geneva, sans-serif;font-size:24px;font-style:normal;font-variant:normal;font-weight:500;line-height:1.4em;color:#e65c00;margin-bottom:10px;margin-top:0px}
+h3{font-family:Muli, sans-serif;font-size:20px;font-style:normal;font-variant:normal;font-weight:400;line-height:1.4em;color:#232323;margin:0px;padding:0px;}
+h4{font-family:Muli, sans-serif;font-size:14px;font-style:italic;font-variant:normal;font-weight:400;line-height:1.4em;color:#565656;margin-bottom:30px;}
+h5{font-family:Muli, sans-serif;font-size:18px;font-variant:normal;font-weight:400;line-height:1.4em;color:#232323;margin-bottom:30px;}
+h6{font-family:Verdana, sans-serif;font-size:16px;font-weight:500;line-height:1.4em;color:#e65c00;float:left;margin-left:10px;margin-top:10px;}
+p,ul{font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;line-height:24px;color:#232323;}
+a,a:hover{color:white}
+label{font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;line-height:24px;color:#232323;}
+p#blockquote{font-family:Verdana, Geneva, sans-serif;font-size:24px;font-style:italic;font-variant:normal;font-weight:500;line-height:1.4em;color:white;}
+#projects a, #contact_us a{color:#e65c00;text-decoration:underline;}
+footer a{color:#e65c00;}
+footer a:hover{color:#232323;text-decoration:underline;}
+.on_black{color:white;text-align:right;}
+.title{text-align:center;}
+.list{text-align:center;}
+.inline{display:inline-block;}
+#logo{margin:12px 0px 12px 10px;padding:0;float:left;height:45px;}
+.input-group{font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;line-height:24px;color:#565656;margin:10px 30px 0px 30px;padding:0;height:40px;outline:none;border-bottom:1px solid #565656;float:left;}
+#search_box{background-color:white;outline:none;border:0;margin:0;margin-top:10px;padding:0;}
+.button_search{background-color:white;outline:none;border:0;display:inline-block;}
+.glyphicon{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.glyphicon-menu-left{color:#e65c00;font-size:30px;padding:0px;margin:0px;}
+.glyphicon-menu-right{color:#e65c00;font-size:30px;padding:0px;margin:0px;}
+.glyphicon-search{color:#acacac;font-size:18px;padding:0px;margin:0px;}
+ul.nav{margin-top:10px;}
+#twitter{text-align:right;}
+.navbar{margin-bottom:0;background-color:#ffffff;z-index:9999;border:0;border-radius:0;-webkit-box-shadow:0 5px 6px -5px #acacac;-moz-box-shadow:0 5px 6px -5px #acacac;box-shadow:0 5px 6px -5px #acacac;}
+.nav_success{margin-bottom:0;border:0;border-radius:0;height:65px;-webkit-box-shadow:0 5px 6px -5px #acacac;-moz-box-shadow:0 5px 6px -5px #acacac;box-shadow:0 5px 6px -5px #acacac;}
+.nav_success img{display:block;margin:0 auto;}
+.navbar li a, .navbar, .navbar-brand{font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:500;line-height:1.4em;color:#565656;margin-bottom:0px;}
+.navbar li:last-child{margin:-5px 0px 0px 20px;}
+.navbar li:first-child{margin-left:0px;}
+.navbar-nav li a:hover, .navbar-nav li a:active{color:#e65c00;text-decoration:none;background-color:#fff;}
+.navbar-default .navbar-toggle{border-color:transparent;color:#fff;}
+.navbar-right{margin-right:0px;}
+.logo-small{color:#e65c00;font-size:50px;}
+.orange_button{border:none;border-radius:0px;text-decoration:none;height:40px;padding-left:30px;padding-right:30px;background-color:#e65c00;font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;color:white;}
+.transparent_button{border:1px solid #e65c00;border-radius:0px;text-decoration:none;height:40px;padding-left:20px;padding-right:20px;margin-top:10px;background-color:white;font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;color:#e65c00;}
+input.transparent_button{margin-bottom:0px}
+.pdf_button{border:1px solid #fc3737;border-radius:0px;text-decoration:none;height:40px;padding-left:20px;padding-right:20px;margin-top:20px;background-color:white;font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;color: #fc3737;}
+.transparent_button:hover{background-color:#fffdf4;}
+.orange_button:hover{background-color:#d75701;}
+.pdf_button:hover{border-color:#c61919;color:#c61919}
+#list_button{margin-top:20px}
+.tags{border:1px solid #e65c00;text-decoration:none;height:30px;padding-left:20px;padding-right:20px;margin-top:10px;margin-right:5px;background-color:white;font-family:Muli, sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:400;color:#e65c00;}
+.tags:hover{background-color:#fffdf4;}
+.panel img{margin-left:12px;}
+.photo-credit{font-size:12px;text-align:right;position:absolute;right:0px;bottom:10px;padding:5px;background-color:white}
+.photo-credit a,.photo-credit a:hover{color:#e65c00}
+#myCarousel{margin-top:-20px;}
+.carousel-control.right, .carousel-control.left{color:#ffe8ad;background-image:none;filter:none;outline:0;opacity:100;top:50%;}
+.carousel-indicators{margin:15px 0px;position:absolute;top:100%;}
+.carousel-indicators li{border-color:#ffe8ad;background-color:#ffe8ad;margin:0px 10px;}
+.carousel-indicators li.active{background-color:#e65c00;}
+.carousel-inner{margin-bottom:20px;}
+.item li{display:inline-block;list-style:none;margin:20px 20px 0px 20px;-webkit-box-shadow:3px 3px 5px #acacac;-moz-box-shadow:3px 3px 5px #acacac;box-shadow:3px 3px 5px #acacac;}
+#flying_books{width:100%;}
+#address{padding:20px;background-color:white;border-bottom:1px dashed #e65c00;}
+#social ul{list-style:none;padding:0px;margin:0px;}
+#social li{display:inline-block;}
+.fa{padding:10px;padding-top:13px;width:40px;height:40px;text-align:center;text-decoration:none;margin-right:10px;margin-bottom:10px;}
+.contact-links .fa:hover, #social .fa:hover{opacity:0.7;text-decoration:none;}
+#social .fa:hover{color:white}
+.fa-facebook{background:#3B5998;color:white;}
+li .fa-twitter{background:#55ACEE;color:white;}
+li .fa-instagram{background:#ffc044;color:white;}
+.fa-linkedin{background:#6495ED;color:white;}
+.fa-rss{background:#FF7F50;color:white;}
+.fa-exclamation{padding:0px;height:40px;text-align:center;text-decoration:none;margin-right:10px;margin-bottom:10px;}
+.fa-envelope-o{color:#D2691E;margin:0px 0px 20px 0px;padding-left:0px;font-size:24px;}
+.contact-links .fa-twitter{color:#55ACEE;margin:0px 0px 20px 0px;padding-left:0px;font-size:24px;}
+img.logos{max-height:60px;max-width:200px;}
+.row{margin-left:0px;margin-right:0px;padding:0px;}
+.form-group{padding:0px;}
+.col-sm-6:first-child{padding-right:20px;}
+.bookcover{margin-top:10px;width:100%;}
+#book_information{margin-bottom:30px;}
+p.warning{margin-top:-5px;}
+#tag_block{margin-top:40px;}
+#tag_block p{margin-bottom:0px;}
+#carousel{max-width:1120px;white-space:nowrap;overflow-y:hidden;overflow-x:scroll;-webkit-transition:width 2s;-webkit-transition-timing-function:ease-in-out;transition:width 2s;transition-timing-function:ease-in-out;}
+.fa-angle-left{margin:110px 20px 0px 0px;padding:0px;}
+.fa-angle-right{margin:110px 0px 0px 20px;padding:0px;}
+#carousel ul, li:first-child{padding-left:0px;}
+#carousel li{display:inline-block;list-style:none;margin:0px 20px 0px 20px;-webkit-box-shadow:3px 3px 5px #acacac;-moz-box-shadow:3px 3px 5px #acacac;box-shadow:3px 3px 5px #acacac;}
+#BOOKdescription{padding-top:30px;}
+#BOOKdescription h2{font-size:80px;letter-spacing:-3px;color:#0E66AF;margin-left:-5px;margin-top:70px}
+#BOOKdescription h3{color:#303030;line-height:1.7em;margin-bottom:30px;color:#0E66AF;}
+#BOOKdescription img{margin-top:30px;width:315px;}
+#BOOKdetails{padding:30px;}
+#BOOKdetails h3{margin-bottom:30px;color:#0E66AF;}
+#form label.error{color:red}
+#book-project,#project-top,#trac1000-project,#trayll-project{background-repeat:no-repeat;background-position:center;background-size:100%}
+#book-project h3,#trac1000-project h3{line-height:1.8em}
+#project-top{padding:0;height:500px;background-image:url(/assets/components/files/images/NewImages/OurProjectsBanner.jpg)}
+#project-top h1{margin:150px auto 40px;color:#fff;text-shadow:0 0 20px #0D47A1}
+#project-top h3{text-align:center;text-shadow:0 0 20px #000;padding:0}
+#book-project,#trac1000-project,#trayll-project{padding:30px 0;height:400px;box-shadow:0 2px 10px #000}#book-project{background-image:url(/assets/components/files/images/NewImages/BOOKProjectBanner.jpg);background-color:#f4f8ff}
+#book-project h3{color:#0E66AF}
+#book-project img{margin:40px 0}
+.book-button,.trayll-button,.trac1000-button{padding:10px 40px;margin:30px 0}
+.book-button{border:0;border-radius:40px;background:#0D47A1;background:-webkit-linear-gradient(left,#1A237E,#0E66AF,#1976D2);background:-o-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:-moz-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:linear-gradient(to right,#1A237E,#0E66AF,#1976D2)}
+.book-button:hover{box-shadow:0 0 10px #0D47A1;cursor:pointer}
+#trayll-project{background-image:url(/assets/components/files/images/NewImages/TRAYLLProjectBanner.jpg)}
+.trayll-button{border:2px solid #388E3C;border-radius:40px;background:#fff}
+.trayll-button:hover{box-shadow:0 0 5px #388E3C;cursor:pointer}
+.trayll-link,.trayll-link:hover{color:#212121;}
+#trayll-project img{margin:40px 0 30px}#trac1000-project{background-image:url(/assets/components/files/images/NewImages/TRAC1000ProjectBanner.jpg)}
+.background-trac1000{background-color:rgba(250,250,250,.8);padding:60px}
+.trac1000-button{border:0;border-radius:40px;background:#880E4F;background:-webkit-linear-gradient(left,#880E4F,#C51162,#D81B60,#F50057);background:-o-linear-gradient(right,#880E4F,#C51162,#D81B60,#F50057);background:-moz-linear-gradient(right,#880E4F,#C51162,#D81B60,#F50057);background:linear-gradient(to right,#880E4F,#C51162,#D81B60,#F50057)}
+.trac1000-button:hover{box-shadow:0 0 5px #880E4F;cursor:pointer}
+@media screen and (max-width:1200px){#book-project,#project-top,#trac1000-project,#trayll-project{background-size:1500px 500px;overflow:hidden}}
+@media screen and (max-width:1109px){#main-banner{background-size:1500px 500px;overflow:hidden;}
+}
+@media screen and (max-width:985px){#BOOKdescription{text-align:center;padding-top:0px}
+#BOOKdescription h2{font-size:40px;letter-spacing:0px;color:#0E66AF;}#book-project img{margin:0px}#book-project{background-image:url(/assets/components/files/images/NewImages/BOOKProjectBannerMobile.jpg);height:700px;background-size:auto}#project-top h1{margin-top:60px}
+}
+@media screen and (max-width:768px){.col-sm-4{text-align:center;margin:25px 0;}
+.bookcover{max-width:200px;}
+#flying_books{width:250px;margin-top:-30px;}
+.transparent_button{margin:10px 0px 20px -10px;}
+#twitter{text-align:center;}
+#social{text-align:center;margin-bottom:30px;}
+#address{margin-top:-15px;margin-bottom:20px;background:none;border:none;text-align:center;}
+input.orange_button{margin-bottom:30px;}
+.item li{overflow:hidden;}
+.logos{max-height:40px;}
+.navbar-toggle{height:45px;width:45px;margin-top:12px;}
+#tag_block{margin-top:20px;}
+.tags{margin-top:10px;}
+.content h1{margin-top:120px;}
+.col-sm-6:first-child{padding-right:0px;}}
+@media screen and (max-width:400px){#about_us{text-align:center;}
+#first_project{margin-top:-40px;}
+#flying_books{width:220px;}
+.content h1{margin-top:100px;text-align:center;color:white;text-shadow:0px 0px 20px #000000;}
+#success{height:400px;}
+#success h2{margin-top:70px;}
+#success img{width:200px;}
+#tag_block{margin-top:20px;}
+.tags{margin-top:10px;}
+#cover{max-width:400px;}
+.bookcover{max-width:300px;margin-left:auto;margin-right:auto;margin-bottom:20px;}
+.information p{margin-top:0px;}
+.book-index img{max-width:300px;margin-left:auto;margin-right:auto;margin-bottom:20px;}
+#list_button .transparent_button{max-width:300px;margin-left:auto;margin-right:auto;}
+}

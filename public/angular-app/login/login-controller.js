@@ -1,7 +1,14 @@
 angular.module('myApp').controller('LoginController', LoginController);
 
-function LoginController($http, $location, $window, AuthFactory, jwtHelper) {
+function LoginController($http, $location, $window, AuthFactory, jwtHelper, $rootScope) {
   var vm = this;
+
+  $rootScope.$on('login', function (event, data) {
+          console.log('broadcast from child in parent');
+          vm.username = data.username;
+          vm.password = data.password;
+          vm.login();
+      });
 
   vm.isLoggedIn = function() {
     if (AuthFactory.isLoggedIn) {

@@ -1,64 +1,122 @@
-<div>
-<label for="singleSelect"> Search by Genre: </label><br>
-   <select name="singleSelect" id="singleSelect" ng-model="genre.search" ng-init="count=10">
-     <option value="">  All  </option> <!-- not selected / blank option -->
-     <option value="science fiction">Science Fiction</option> <!-- interpolation -->
-     <option value="action">Action</option>
-     <option value="fantasy">Fantasy</option>
-   </select>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <!-- icon library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Link the fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+   <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <![endif]-->
+   <link href="css/bootstrap.min.css" rel="stylesheet"/>
+   
+   <link href="css/styles.min.css" rel="stylesheet"/>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="/jquery/jquery.validate.min.js"></script>
+   <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-51910192-1', 'tracbook.com');
+   ga('send', 'pageview');
+ </script>
+    
+</head>
+<body>
+    <div class="container ng-scope">
+    <div>
+        <label for="singleSelect" style="
+        color: #F3969A;
+        font-size:x-large"
+        > Search by Genre: </label>
+           <select name="singleSelect" id="singleSelect" ng-model="genre.search" ng-init="count=10">
+             
+             <option value="">  All  </option> <!-- not selected / blank option -->
+             <option value="science fiction">Science Fiction</option> <!-- interpolation -->
+             <option value="action">Action</option>
+             <option value="fantasy">Fantasy</option>
+           </select>
+        </div>
+        
+        <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
+        <hr>
+        <div>
+        <label for="singleSelect" style="
+        color: #F3969A;
+        font-size:x-large"
+        > Search by Tag: </label>
+           <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
+             <option value="">  All  </option> <!-- not selected / blank option -->
+             <option value="magic">Magic</option> <!-- interpolation -->
+             <option value="classic">Classic</option>
+             <option value="strong">Strong Female Characters</option>
+           </select>
+        </div>
+        <hr>
+        <div>
+          <label style="
+          color: #F3969A;
+          font-size:x-large">Search by Title: <input ng-model="title.search" ng-init="count=10"></label>
+        </div>
+        <hr>
+        <div>
+          <label style="
+          color: #F3969A;
+          font-size:x-large">Search by Author: <input ng-model="author.search" ng-init="count=10"></label>
+        </div>
+        
+        <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
+        
+        <div class="row" ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
+        
+            <div class="col-md-3">
+               <hr> 
+                <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
+              
+            </div>
+
+            <div class="col-md-7">
+              <hr>
+                <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
+                <h5> {{ book.Author }}</h5>
+                <p > {{ book.Description }}</p>
+                <p >
+                  <b>Genre: </b>
+                   {{ book.Genre }}
+                  </p>
+                <p > {{ book.Tags }}</p>
+                <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
+           
+          
+            
+            
+          
+          </div>
+         
+        </div>
+        
+        <hr>
+        
+        
+        <div>
+          <button ng-click="count = count + 10" ng-init="count=10">MORE RESULTS</button>
+        </div>
+        
+        <script src="jquery/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+  
+  
+  <!-- Put cover on left and deets on right, make whole card a link-->
 </div>
-
-<!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
-
-<div>
-<label for="singleSelect"> Search by Tag: </label><br>
-   <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
-     <option value="">  All  </option> <!-- not selected / blank option -->
-     <option value="magic">Magic</option> <!-- interpolation -->
-     <option value="classic">Classic</option>
-     <option value="strong">Strong Female Characters</option>
-   </select>
-</div>
-
-<div>
-  <label>Search by Title: <input ng-model="title.search" ng-init="count=10"></label>
-</div>
-
-<div>
-  <label>Search by Author: <input ng-model="author.search" ng-init="count=10"></label>
-</div>
-
-<!-- IF NO RESULTS SHOW 'NO RESULTS'-->
-<!-- INSTEAD OF CHANGING DATABASE COULD JUST DO A REGEX ON THE LIST OF TAGS /GENRES AND ITERATE THROUGH THEM AND ADD ANCHOR TO EACH??? -->
-<!-- pipes for tags and genres ????-->
-
-<div>
-<section ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count" class="card mb-5" id="testBook">
-  <div class="card-block">
-    <h2 class="card-title"> {{ book.Title }} {{ data.singleSelect }}</h2>
-    <h5 class="card-subtitle"> {{ book.Author }}</h5>
-    <p class="card-text"> {{ book.Description }}</p>
-    <p class="card-text">{{ book.Genre }}</p>
-    <p class="card-text"> {{ book.Tags }}</p>
-     <!-- get list from results here -->
-    <a class="card-link" ng-href="#!/book/{{ book._id }}">View Details</a>
-    <script>
-      var genreSting = {{ book.Genre }}
-      console.log(genreSting);
-    </script>
-  </div>
-  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}"
-</section>
-</div>
-
-
-
-<div>
-  <button ng-click="count = count + 10" ng-init="count=10"> {{count}} MORE RESULTS</button>
-</div>
-
-
-
-
-
-<!-- Put cover on left and deets on right, make whole card a link-->
+</body>
+</html>
