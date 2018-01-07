@@ -1,25 +1,38 @@
+<!doctype html>
+<html lang="en">
 
-<section class="card mb-5" id="testBook">
-  <div class="card-block">
-    <h2 class="card-title"> {{ vm.book.Title }}</h2>
-    <h5 class="card-subtitle"> {{ vm.book.Author }}</h5>
-    <p class="card-text"> {{ vm.book.Description }}</p>
-    <button type="button" class="btn btn-secondary">Add to wish list</button>
-    <button type="button" class="btn btn-secondary"><a ng-href="{{vm.book.AmazonUK}}">Amazon</a></button>
-    <button type="button" class="btn btn-secondary"><a ng-href="{{vm.book.WorldCat}}">WorldCat</a></button>
-    <button type="button" class="btn btn-secondary"><a ng-href="#!/test">Test Page</a></button>
+<body>
+<div class="container">
 
 
+<div class="row" id="testBook">
+    
+        <div class="col-md-3">
+           <hr> 
+            <center><img class="img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}" alt=""></center>
+          
+        </div>
 
+        <div class="col-md-7">
+          <hr>
+          <h2 > {{ vm.book.Title }}</h2>
+          <h5 > {{ vm.book.Author }}</h5>
+          <p > {{ vm.book.Description }}</p>
+          <p>{{vm.book.Genre }}</p>
+          <p>{{vm.book.Tags}}</p>
+       
+          <a class="browse-btn" href={{vm.book.AmazonUK}} target="_blank">Amazon</a>
+        <br><br>
+          <a class="browse-btn" href={{vm.book.WorldCat}} target="_blank">WorldCat</a>
+        
+        
+      
+      </div>
+      </div>
+      </div>
+      </body>
+      
+      <hr>
+      <hr>
 
-    <!-- <p class="card-text"> {{ JSON.parse(vm.book.Genre); }}</p> -->
-    <!-- gonna have to write a thing that serves up the parsed json, cant do it inline  -->
-
-  </div>
-  <img class="card-img-bottom img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}">
-</section>
-
-
-<div>
-  <h2 class="text-center">Carousel of books like this one below</h2>
-</div>
+</html>
