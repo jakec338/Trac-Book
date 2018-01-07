@@ -23,6 +23,9 @@ var userSchema = new mongoose.Schema({
   },
   genres: {
     type: [String]
+  },
+  starredBooks: {
+    type: [String]
   }
 
 });
