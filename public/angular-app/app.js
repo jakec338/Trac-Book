@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute', 'angular-jwt', 'ui.bootstrap']).config(config).run(run);
+angular.module('myApp', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
 function config($httpProvider, $routeProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
@@ -51,14 +51,6 @@ function config($httpProvider, $routeProvider) {
       controllerAs: 'vm',
       access:{
         restricted: true
-      }
-    })
-    .when('/test', {
-      templateUrl: 'angular-app/test/test.html',
-      controller: Car,
-      controllerAs: 'vm',
-      access:{
-        restricted: false
       }
     })
     .otherwise({
