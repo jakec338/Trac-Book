@@ -1,0 +1,18 @@
+
+*{
+    font-family: 'Muli';
+}
+
+.input{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/images/icons8-search-26.png');
+    background-position: 6px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 12px 12px 40px;
+    
+
+}

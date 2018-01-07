@@ -1,37 +1,28 @@
 <!doctype html>
 <html lang="en">
-<nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ng-init="vm.init()">
-        
+<nav ng-controller="LoginController as vm" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container" data-toggle="collapse" data-target="#navbarResponsive">
+  <div class="navbar-header">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"> </span>
+     </button>
+  </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>-->
-          </ul>
+  <div class="collapse navbar-collapse"  id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+         </li>
+       </ul>
 
-          <form ng-if="!vm.isLoggedIn()" class="form-inline my-2 my-lg-0">
-            <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('register')" ng-if="!vm.isLoggedIn()" href="#!/register">Register</a>
-            <a class="navbar-btn btn-sm btn-info" ng-class="vm.isActiveTab('login')" ng-if="!vm.isLoggedIn()" href="#!/login">Login</a>
-        </form>
+       <ul class="nav navbar-nav navbar-right">
+          <li> <a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/register" >Register</a></li>
+          <li><a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/login">Login</a></li>
+          <li><a ng-if="vm.isLoggedIn()" class="nav-link" href="#!/profile">Profile</a></li>
+          <li><a ng-if="vm.isLoggedIn()" class="nav-link" ng-click="vm.logout()">Logout</a></li>
+      </ul>
 
-        
-
-          <form ng-if="vm.isLoggedIn()" class="form-inline my-2 my-lg-0" >
-                <a class="navbar-btn btn-sm btn-info" href="#!/profile">Profile</a>
-                <a class="navbar-btn btn-sm btn-info" ng-click="vm.logout()">Logout</a>
-          </form>
-
-        </div>
-      </nav>
-      </html>
+  </div>
+     </div>
+</nav>
+</html>
