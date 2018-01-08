@@ -15,22 +15,25 @@
     </div>
     <hr>
     <div>
-        <label for="singleSelect"im > Search by Genre: </label>
-        <br>
-           <select name="singleSelect" id="singleSelect" ng-model="genre.search" ng-init="count=10">
+        <label for="singleSelect"im > Search by Genre: </label> 
+           <select name="singleSelect" id="singleSelect1" ng-model="vm.genSearch" ng-init="count=10">
              
              <option value="">  All  </option> <!-- not selected / blank option -->
              <option value="science fiction">Science Fiction</option> <!-- interpolation -->
              <option value="action">Action</option>
              <option value="fantasy">Fantasy</option>
+             <option value="dystopia">Dystopia</option>
+             <option value="friendship">Friendship</option>
+             <option value="romance">Romance</option>
            </select>
         </div>
         
         <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
         <hr>
         <div>
-        <label for="singleSelect"> Search by Tag: </label><br>
-           <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
+        <label for="singleSelect"im> Search by Tag: </label>
+           <select name="singleSelect" id="singleSelect" ng-model="vm.tagSearch" ng-init="count=10">
+
              <option value="">  All  </option> <!-- not selected / blank option -->
              <option value="magic">Magic</option> <!-- interpolation -->
              <option value="classic">Classic</option>
@@ -42,7 +45,7 @@
         
         <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
         
-        <div class="row" ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
+        <div class="row" ng-repeat="book in vm.books | filter : {Tags: vm.tagSearch, Genre: vm.genSearch, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
         
             <div class="col-md-3">
                <hr> 
@@ -55,26 +58,22 @@
                 <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
                 <h5> {{ book.Author }}</h5>
                 <p > {{ book.Description }}</p>
-                <p >
                   <b>Genre: </b>
-                   {{ book.Genre }}
-                  </p>
-                <p > {{ book.Tags }}</p>
+                  <a class="btn btn-outline-secondary" ng-repeat="genre in book.Genre" ng-click="vm.genreSearch(genre)"> {{ genre }} </a>
+                  <br><br>
+                  <b>Tags: </b>
+                  <a class="btn btn-outline-secondary" ng-repeat="tag in book.Tags" ng-click="vm.tagsSearch(tag)"> {{ tag }} </a>
+                <br><br>
                 <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
-           
-          
-            
-            
           
           </div>
          
         </div>
         
         <hr>
-        
-        
+
         <div>
-          <button ng-click="count = count + 10" ng-init="count=10">MORE RESULTS</button>
+          <button ng-click="count = count + 10">MORE RESULTS</button>
         </div>
         
         

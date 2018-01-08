@@ -53,6 +53,16 @@ function config($httpProvider, $routeProvider) {
         restricted: true
       }
     })
+
+    .when('/test', {
+      templateUrl: 'angular-app/test/test.html',
+      controller: TestController,
+      controllerAs: 'vm',
+      access:{
+        restricted: false
+      }
+    })
+
     .otherwise({
       redirectTo: '/'
     });

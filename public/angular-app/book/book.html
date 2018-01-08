@@ -18,12 +18,25 @@
           <h2 > {{ vm.book.Title }}</h2>
           <h5 > {{ vm.book.Author }}</h5>
           <p > {{ vm.book.Description }}</p>
-          <p>{{vm.book.Genre }}</p>
-          <p>{{vm.book.Tags}}</p>
+          <b>Genre: </b>
+          <b class="btn btn-outline-secondary" ng-repeat="genre in vm.book.Genre">{{ genre }} </b>
+          <br><br>
+          <b>Tags: </b>
+          <b class="btn btn-outline-secondary" ng-repeat="tag in vm.book.Tags">{{ tag }} </b>
+          <br><br>
+          
        
           <a class="browse-btn" href={{vm.book.AmazonUK}} target="_blank">Amazon</a>
         <br><br>
           <a class="browse-btn" href={{vm.book.WorldCat}} target="_blank">WorldCat</a>
+          <br><br>
+          <b>{{ vm.User.username }}</b><b>{{ vm.warn }}</b>
+
+          <!-- <div ng-controller="ProfileController as pc">
+            <b>{{ pc.User.username }}</b>
+            <a class="browse-btn" ng-href="#!/test">Add to Reading List</a>
+          </div> -->
+          
         
         
       

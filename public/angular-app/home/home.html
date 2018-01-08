@@ -13,18 +13,11 @@
 
   <a class="link" href="#!/browse">BOOK RECOMMENDATIONS</a>
   
-  <div class="content-all">
+  <div class="content-all" id="testBook">
     <div class="content-carrousel">
-      <figure><img src="./images/Bookcovers/15DaysWithoutAHeadDavidCousins.jpg"></figure>
-      <figure><img src="./images/Bookcovers/AbandonMegCabot.jpg"></figure>
-      <figure><img src="./images/Bookcovers/AcrossTheNightingaleFloorLianHearn.jpg"></figure>
-      <figure><img src="./images/Bookcovers/AfterIrisNatashaFarrant.jpg"></figure>
-      <figure><img src="./images/Bookcovers/EverlostNealShusterman.jpg"></figure>
-      <figure><img src="./images/Bookcovers/GoodOmensTerryPratchett.jpg"></figure>
-      <figure><img src="./images/Bookcovers/HappyEverAfterAdèleGeras.jpg"></figure>
-      <figure><img src="./images/Bookcovers/RiverBoyTimBowler.jpg"></figure>
-      <figure><img src="./images/Bookcovers/TheDarkestPartOfTheForestHollyBlack.jpg"></figure>
+      <figure ng-repeat="book in vm.books |  limitTo: 6" ><a ng-href="#!/book/{{ book._id }}"><img src="../images/Bookcovers/{{ book.Cover }}"></a></figure>
       
+       
     </div>
   </div>
   
