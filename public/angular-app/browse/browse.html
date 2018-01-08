@@ -5,15 +5,24 @@
     </head>
 <body>
 <div class="container ng-scope">
-    <hr>
+    <br>
+    <div class="dropdown">
+    
+    <div><button class="dropbtn">ADVANCED SEARCH</button></div>
+    
+    <div class="dropdown-content">
     <div >
       <input class="input" name="search" placeholder="Search by Title" ng-model="title.search" ng-init="count=10">
     </div>
+
     <hr>
+    
     <div >
       <input class="input" name="search" placeholder="Search by Author" ng-model="author.search" ng-init="count=10">
     </div>
+    
     <hr>
+    
     <div>
         <label for="singleSelect"im > Search by Genre: </label> 
            <select name="singleSelect" id="singleSelect1" ng-model="vm.genSearch" ng-init="count=10">
@@ -26,7 +35,7 @@
              <option value="friendship">Friendship</option>
              <option value="romance">Romance</option>
            </select>
-        </div>
+    </div>
         
         <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
         <hr>
@@ -39,19 +48,22 @@
              <option value="classic">Classic</option>
              <option value="strong">Strong Female Characters</option>
            </select>
-        </div>
+    </div>
+
+    </div>
+    </div>
+    <br>
+  
         
-        
-        
-        <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
+    <br> 
+    <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
         
         <div class="row" ng-repeat="book in vm.books | filter : {Tags: vm.tagSearch, Genre: vm.genSearch, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
         
-            <div class="col-md-3">
-               <hr> 
-                <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
-              
-            </div>
+        <div class="col-md-3" style="background-color:#e2ecfd;">
+          <br> 
+          <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
+        </div>
 
             <div class="col-md-9">
               <hr>
@@ -69,6 +81,8 @@
           </div>
          
         </div>
+         
+    </div>
         
         <hr>
 
