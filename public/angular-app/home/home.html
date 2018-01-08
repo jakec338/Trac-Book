@@ -1,34 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <head>
+      <link href="css/home.css" rel="stylesheet" >
+  </head>
   
-  <link href="css/custom.css" rel="stylesheet"/>
-</head>
 <body>
   <div class="container">
 
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  <div class="home-image">
+  <img src="./images/BOOKLogoOptions_Fotor.jpg" alt="book">
   </div>
 
-  <figure class="text-center">
-  <div>
-    <img class="img-fluid homepage-img" src="./images/BOOKLogoOptions_Fotor.jpg" alt="book">
+  <a class="link" href="#!/browse">BOOK RECOMMENDATIONS</a>
+  
+  <div class="content-all" id="testBook">
+    <div class="content-carrousel">
+      <figure ng-repeat="book in vm.books |  limitTo: 6" ><a ng-href="#!/book/{{ book._id }}"><img src="../images/Bookcovers/{{ book.Cover }}"></a></figure>
+      
+       
+    </div>
   </div>
-
-  <div class="text-center">
-    <button type="button" class="btn btn-primary btn-lg"><a ng-href="#!/browse">Browse</a></button>
-    <button type="button" class="btn btn-primary btn-lg">Search</button>
-  </div>
-  </figure>
-
+  
 </div>
-
-<div>
-  <h1 class="text-center">Add in like book of the day or sominksttt  {{ vm.title }}</h1>
-</div>
+</body>
+</html>

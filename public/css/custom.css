@@ -22,6 +22,10 @@ body {
 /* Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.99px) {  }
 
+.highlight {
+  background-color: yellow;
+}
+
 .container {
   padding-top: 20px;
 }
@@ -67,6 +71,47 @@ body {
     text-align: center;
     font-size: 16px;
 }
+
+/* Genre button */
+.btn-outline-secondary {
+  color:#F3969A;
+  background-color:transparent;
+  background-image:none;
+  border-color:#F3969A;
+}
+  .btn-outline-secondary:hover{ 
+    color:#fff;
+    background-color:#F3969A;
+    border-color:#F3969A
+  }
+    
+  .btn-outline-secondary:focus,.btn-outline-secondary.focus {
+    -webkit-box-shadow:0 0 0 0.2rem rgba(243,150,154,0.5);
+    box-shadow:0 0 0 0.2rem rgba(243,150,154,0.5)}
+    
+  .btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#F3969A;background-color:transparent}.btn-outline-secondary:not([disabled]):not(.disabled):active,.btn-outline-secondary:not([disabled]):not(.disabled).active,.show>.btn-outline-secondary.dropdown-toggle{color:#fff;background-color:#F3969A;border-color:#F3969A;-webkit-box-shadow:0 0 0 0.2rem rgba(243,150,154,0.5);box-shadow:0 0 0 0.2rem rgba(243,150,154,0.5)}
+
+
+
+  /* dropdown search btn */
+  .dropdown-toggle {
+    color:#fff;
+    background-color:
+    #F3969A;
+    border-color:#F3969A;
+  }
+
+
+.browse-btn {
+  border-radius: 12px;
+  background-color: rgb(228, 219, 211); /* Green */
+  border: none;
+  color: rgb(12, 7, 5);
+  padding: 5px 40px;
+  text-align: center;
+  font-size: 16px;
+}
+
 
 .navbar {
   background-color:rgb(228, 219, 211);

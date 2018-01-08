@@ -94,3 +94,20 @@ module.exports.myprofile = function (req, res) {
     })
 };
 
+// module.exports.addBook = function(req, res){
+//     var book = req.body.book;
+//     // add user name bit
+//     User.findOneAndUpdate ({
+//         username: username
+//     },
+//     {$add:{bookList:"Naomi"}}
+//     ).exec(function (err, user) {
+//         if(err){
+//             console.log(err);
+//             res.status(400).json(err);
+//         } else {
+//             console.log('user created', user);
+//             res.status(201).json(user);
+//         }
+//     }
+// };

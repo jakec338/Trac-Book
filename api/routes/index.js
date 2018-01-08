@@ -9,7 +9,6 @@ var ctrlUsers = require ('../controllers/users.controllers.js');
 router
   .route('/json')
   .get(ctrlHotels.hotelsGetAll);
-  //  adding ctrlUsers.authenticate   means you cannot access browse function on my machine
 router
   .route('/json/:hotelId')
   .get(ctrlHotels.hotelsGetOne);
@@ -37,6 +36,9 @@ router
 .route('/users/login')
 .post(ctrlUsers.login);
 
+// router
+// .route('/users/addbook')
+// .put(ctrlUsers.);
 
 router
 .route('/users/myprofile')

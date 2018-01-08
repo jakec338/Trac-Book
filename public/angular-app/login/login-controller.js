@@ -50,6 +50,6 @@ function LoginController($http, $location, $window, AuthFactory, jwtHelper, $roo
     delete $window.sessionStorage.token;
     $location.path('/');
   }
-
+  
    
 }
