@@ -1,29 +1,25 @@
 <!doctype html>
 <html lang="en">
-    <head>
+    <!-- <head>
         <link href="css/book.css" rel="stylesheet" >
-    </head>
+    </head> -->
 
 <body>
 <div class="container">
-<div>
-    <h2> {{ vm.book.Title }}</h2>
-    
-    <h5> {{ vm.book.Author }}</h5>
-  </div> 
 <div class="row" id="testBook">
     
-    <div class="col-md-3" style="background-color:#e2ecfd;">
+    <div class="col-md-3">
       <hr> 
             <center><img class="img-fluid cover" src="../images/Bookcovers/{{ vm.book.Cover }}" alt=""><div class="topright">{{vm.book.Readinglevel}}</div></center>
       <hr>  
         </div>
 
-        <div class="col-md-9" style="background-color:#f4f8ff;">
+        <div class="col-md-9">
           <hr>
           <h2 > {{ vm.book.Title }}</h2>
           <h5 > {{ vm.book.Author }}</h5>
-          <p > {{ vm.book.Description }}</p>
+          <i > {{ vm.book.Description }}</i>
+          <br><br>
           <b>Genre: </b>
           <b class="btn btn-outline-secondary" ng-repeat="genre in vm.book.Genre">{{ genre }} </b>
           <br><br>
@@ -31,12 +27,6 @@
           <b class="btn btn-outline-secondary" ng-repeat="tag in vm.book.Tags">{{ tag }} </b>
           <br><br>
           
-       
-          
-          <p style="font-style: italic;"> {{ vm.book.Description }}</p>
-          <p> <b ng-if="vm.book.Genre" style="text-decoration: underline;"> Genre:</b> {{vm.book.Genre }}</p>
-          <p> <b ng-if="vm.book.Tags" style="text-decoration: underline;"> Tags:</b> {{vm.book.Tags}}</p>
-<hr>
           <i ng-if="vm.book.Warnings" class="fa fa-exclamation" style="font-size:24px; float: left; margin-top: -5px; color:#ff8566;"></i><p class="warning"><i>{{vm.book.Warnings}}</i></p>
           
           <a class="browse-btn" href={{vm.book.AmazonUK}} target="_blank">Amazon</a>
