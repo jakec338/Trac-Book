@@ -1,6 +1,8 @@
 <!doctype html>
 <html ng-app="myApp" lang="en">
-
+    <head>
+        <link href="css/registration.css" rel="stylesheet" >
+    </head>
 
 <body>
 <div class="container">
@@ -20,6 +22,7 @@
 
     <div ng-switch="vmForm.step">
     <div class="stepone" ng-switch-when="one" >
+      <hr>
         <h3>REGISTER</h3>
         <div class="form-group">
           <label for="email">Email</label>
@@ -39,24 +42,28 @@
           <label for="password-repeat">Repeat Password</label>
           <input type="password" class="form-control" id="password-repeat" placeholder="Password"  ng-model="vmForm.passwordRepeat" autocapitalize="none">
         </div>
-        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepTwo()" >Continue</button>
+        <button type="button" class="btn-primary"  ng-click="vmForm.stepTwo()" >Continue</button>
+        <hr>
     </div>
 
     <div class="steptwo" ng-switch-when="two">
+      <hr>
         <h3>AGE</h3>
         <div class="form-group">
         <div><input type="radio" ng-model="vmForm.age" id="age" value="12+">12+</div><br/>
         <div><input type="radio" ng-model="vmForm.age" id="age" value="14+">14+</div><br/>
         <div><input type="radio" ng-model="vmForm.age" id="age" value="16+">16+</div><br/>
         </div>
-        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepOne()" >Back</button>
-        <button type="button" class="btn btn-primary" ng-click="vmForm.stepThree()">Continue</button>
+        <button type="button" class="btn-primary"  ng-click="vmForm.stepOne()" >Back</button>
+        <button type="button" class="btn-primary" ng-click="vmForm.stepThree()">Continue</button>
+        <hr>
     </div>
 
     <div class="stepthree" ng-switch-when="three">
+      <hr>
         <h3>GENRES</h3>
         
-        <select ng-model="vmForm.genres" id="genres" multiple>
+        <select ng-model="vmForm.genres" id="genres" multiple size="6">
         <option value="science fiction">Science Fiction</option>
         <option value="action" >Action</option> 
         <option value="fantasy">Fantasy</option>
@@ -64,8 +71,14 @@
         <option value="historical">Historical</option> 
         <option value="mystery" >Mystery</option>
         </select>
-        <button type="button" class="btn btn-primary"  ng-click="vmForm.stepTwo()" >Back</button>
-        <button type="submit" class="btn btn-primary" >Submit</button>
+        <br>
+        <br>
+        <p class="info">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+       
+        <br>
+        <button type="button" class="btn-primary"  ng-click="vmForm.stepTwo()" >Back</button>
+        <button type="submit" class="btn-primary" >Submit</button>
+        <hr>
     </div>
     </div>
    </form>    

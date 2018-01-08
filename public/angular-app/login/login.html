@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <link href="css/registration.css" rel="stylesheet" >
+    </head>
 <div class="container">
-    <div class = "panel panel-default">
-        <br/><div class="panel heading"> LOGIN </div><br/>
+  <hr>
+    <h3>LOGIN</h3>
     <div class="panel-body">
 
             <form ng-if="!vm.isLoggedIn()" name"login" ng-submit="vm.login()">
@@ -14,10 +17,11 @@
                       <input type="password" class="form-control input-sm" placeholder="Password" ng-model="vm.password" autocapitalize="none">
                     </div>
                     
-                    <br/><button type="submit" class="browse-btn">Login</button>
+                    <br/><button type="submit" class="btn-primary">Login</button>
                     
             </form>
+    
     </div>
-    </div>
+    <hr>
     </div>
 </html>
