@@ -11,15 +11,30 @@
   <div class="collapse navbar-collapse"  id="navbarResponsive">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#" style="
+          font-size: 20px;
+          color:#1A237E;
+          text-shadow: 1px 0px 2px rgb(163, 162, 162);">Home <span class="sr-only">(current)</span></a>
          </li>
        </ul>
 
        <ul class="nav navbar-nav navbar-right">
-          <li> <a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/register" >Register</a></li>
-          <li><a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/login">Login</a></li>
-          <li><a ng-if="vm.isLoggedIn()" class="nav-link" href="#!/profile">Profile</a></li>
-          <li><a ng-if="vm.isLoggedIn()" class="nav-link" ng-click="vm.logout()">Logout</a></li>
+          <li> <a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/register" style="
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Register</a></li>
+          <li><a ng-if="!vm.isLoggedIn()" class="nav-link" href="#!/login"style="
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Login</a></li>
+          <li><a ng-if="vm.isLoggedIn()" class="nav-link" href="#!/profile"style="
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Profile</a></li>
+          <li><a ng-if="vm.isLoggedIn()" class="nav-link" ng-click="vm.logout()"style="
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Logout</a></li>
       </ul>
 
   </div>

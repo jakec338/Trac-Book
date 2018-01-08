@@ -1,26 +1,47 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <link href="css/registration.css" rel="stylesheet" >
+    </head>
 <div class="container">
   <div class = "panel panel-default">
-  <h1 class="text-center">MY ACCOUNT</h1>
+    <hr>
+  <h3 class="text-center">MY ACCOUNT</h3>
   <div class="panel-body">
-
-
+  
+  
   <form>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" style=" text-decoration: underline;
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Email</label>
             <div>{{vm.User.email}}</div>
           </div>
-
-          <div class="form-group">
-            <label for="username">Username </label>
+  
+          <div class="form-group" >
+            <label for="username" style=" text-decoration: underline;
+            font-size: 20px;
+            color:#1A237E;
+            text-shadow: 1px 0px 2px rgb(163, 162, 162);">Username </label>
             <div>{{vm.User.username}}</div>
           </div>
   
   
+          
   </form>
-  
-  
+  <hr>
+  <h3 class="text-center">MY READING LIST</h3>
+  <ol type="1">
+    <li class="book">Legend</li>
+    <li class="book">The Young Elites</li>
+    <li class="book">The Handmaid's Tale</li>
+    <li class="book">Cinder (The Lunar Chronicles, #1)</li>
+    <li class="book">Simon vs the Homo Sapiens' Agenda</li>
+    <li class="book">Only Ever Yours</li>
+  </ol>
+  <hr>
+    
   </div>
   </div>
   </div>

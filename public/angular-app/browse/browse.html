@@ -5,15 +5,24 @@
     </head>
 <body>
 <div class="container ng-scope">
-    <hr>
+    <br>
+    <div class="dropdown">
+    
+    <div><button class="dropbtn">ADVANCED SEARCH</button></div>
+    
+    <div class="dropdown-content">
     <div >
       <input class="input" name="search" placeholder="Search by Title" ng-model="title.search" ng-init="count=10">
     </div>
+
     <hr>
+    
     <div >
       <input class="input" name="search" placeholder="Search by Author" ng-model="author.search" ng-init="count=10">
     </div>
+    
     <hr>
+    
     <div>
         <label for="singleSelect"im > Search by Genre: </label>
         <br>
@@ -24,11 +33,11 @@
              <option value="action">Action</option>
              <option value="fantasy">Fantasy</option>
            </select>
-        </div>
+    </div>
         
-        <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
-        <hr>
-        <div>
+    <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
+    <hr>
+    <div>
         <label for="singleSelect"> Search by Tag: </label><br>
            <select name="singleSelect" id="singleSelect" ng-model="tag.search" ng-init="count=10">
              <option value="">  All  </option> <!-- not selected / blank option -->
@@ -36,46 +45,49 @@
              <option value="classic">Classic</option>
              <option value="strong">Strong Female Characters</option>
            </select>
-        </div>
-        
-        
-        
-        <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
-        
-        <div class="row" ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
-        
-            <div class="col-md-3">
-               <hr> 
-                <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
-              
-            </div>
+    </div>
 
-            <div class="col-md-9">
-              <hr>
-                <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
-                <h5> {{ book.Author }}</h5>
-                <p > {{ book.Description }}</p>
-                <p >
-                  <b>Genre: </b>
-                   {{ book.Genre }}
-                  </p>
-                <p > {{ book.Tags }}</p>
-                <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
-           
-          
-            
-            
-          
-          </div>
+    </div>
+    </div>
+    <br>
+  
+        
+    <br> 
+    <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
+        
+    <div class="row" ng-repeat="book in vm.books | filter : {Tags: tag.search, Genre: genre.search, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
+        
+        <div class="col-md-3" style="background-color:#e2ecfd;">
+          <br> 
+          <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
+        </div>
+
+        <div class="col-md-9" style="background-color:#f4f8ff;">
+          <br>
+          <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
+          <h5> {{ book.Author }}</h5>
+          <p style="font-style: italic;" > {{ book.Description }}</p>
+          <br>
+          <p >
+            <b ng-if="book.Genre" style="text-decoration: underline;"> Genre:</b>
+                {{ book.Genre }}
+          </p>
+          <br>
+          <i ng-if="book.Warnings" class="fa fa-exclamation" style="font-size:24px; float: left; margin-top: -5px; color:#ff8566;"></i><p class="warning"><i>{{book.Warnings}}</i></p>
+          <!--<p > {{ book.Tags }}</p>-->
+          <br>
+          <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
+          <hr>  
+        </div>
          
-        </div>
+    </div>
         
-        <hr>
+    <hr>
         
         
-        <div>
-          <button ng-click="count = count + 10" ng-init="count=10">MORE RESULTS</button>
-        </div>
+    <div>
+      <button class="browse-btn" ng-click="count = count + 10" ng-init="count=10">MORE RESULTS</button>
+    </div>
         
         
   
