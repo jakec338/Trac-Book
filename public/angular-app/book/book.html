@@ -44,8 +44,7 @@
         <a class="browse-btn" href={{vm.book.WorldCat}} target="_blank">WorldCat</a>
         <br>
         <br>
-        <a class="browse-btn" ng-click="vm.addBook()">Add to your Reading List {{ vm.bookHighlight }} {{ vm.warn }} {{ vm.bookInListWarn }}</a>
-        <br>
+        
         <a><div ng-click="vm.addBook()" ng-show="vm.showBookIcon" ng-class="{ 'book-icon-added': vm.bookHighlight }" class="book-icon">
           <img src="../images/book-icon.png" alt="book"> <b> {{ vm.bookInListWarn }}</b>
         </div>

@@ -41,6 +41,10 @@ router
 .put(ctrlUsers.addBook);
 
 router
+.route('/users/removebook')
+.put(ctrlUsers.removeBook);
+
+router
 .route('/users/myprofile')
 .get(ctrlUsers.authenticate, ctrlUsers.myprofile);
 

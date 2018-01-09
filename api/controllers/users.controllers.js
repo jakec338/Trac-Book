@@ -109,4 +109,21 @@ module.exports.addBook = function(req, res){
             res.status(201).json(user);
         }
     });
+};
+
+module.exports.removeBook = function(req, res){
+    var query = { username: req.body.username }
+    // add user name bit
+    User.update (
+        query,
+        { $pullAll: {bookList: [req.body.bookToRemove] }})
+        .exec(function (err, user) {
+        if(err){
+            console.log(err);
+            res.status(400).json(err);
+        } else {
+            console.log('book removed', user);
+            res.status(201).json(user);
+        }
+    });
 }
