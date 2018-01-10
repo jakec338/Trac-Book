@@ -10,6 +10,10 @@ body {
   margin-bottom: 90px;
 }
 
+*{
+  font-family: 'Muli';
+}
+
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.99px) {  }
 
@@ -34,15 +38,7 @@ body {
   padding: 90px;
 }
 
-.home-btn{
-  border-radius: 12px;
-  background-color: rgb(228, 219, 211); /* Green */
-  border: none;
-  color: rgb(61, 101, 160);
-  padding: 5px 90px;
-  text-align: center;
-  font-size: 25px;
-}
+
 
 .padded {
   padding-top: 30px
