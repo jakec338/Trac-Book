@@ -15,3 +15,12 @@ function ProfileController($location, $http, bookDataFactory) {
       return vm.books;
     })
   }
+
+  // book recommend  -- 
+  // make an array of tags that are associated with each book in reading list 
+  // run through that array in an ng-for loop and use it in a filter
+  // can use a function in filter that returns an array
+  // might have to make own filter
+
+
+  // OR OR (easier) use custom filter and do math.random on array to return only one type of tag 

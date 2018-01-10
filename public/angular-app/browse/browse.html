@@ -40,13 +40,59 @@
         <!-- Ideally figure out how to choose the attribute your filtering dynamically too. I.e picker for Genre and Tags -->
         <hr>
         <div>
-        <label for="singleSelect"im> Search by Tag: </label>
+        <label for="singleSelect"im > Search by Tag: </label>
            <select name="singleSelect" id="singleSelect" ng-model="vm.tagSearch" ng-init="count=10">
 
              <option value="">  All  </option> <!-- not selected / blank option -->
              <option value="magic">Magic</option> <!-- interpolation -->
              <option value="classic">Classic</option>
              <option value="strong">Strong Female Characters</option>
+             <option value="feminism">Feminism</option>
+             <option value="boarding">Boarding School</option>
+             <option value="witches">Witches</option>
+             <option value="environment">Environment</option>
+             <option value="lgbt">LGBT</option>
+             <option value="comingout">Coming Out</option>
+             <option value="eating">Eating Disorders</option>
+             <option value="rape">Rape</option>
+             <option value="social">Social Media</option>
+             <option value="ethics">Ethics</option>
+             <option value="religion">Religion</option>
+             <option value="terrorism">Terrorism</option>
+             <option value="issues">Social Issues</option>
+             <option value="ghosts">Ghosts</option>
+             <option value="afterlife">Afterlife</option>
+             <option value="transsexual">Transsexual</option>
+             <option value="transgender">Transgender</option>
+             <option value="bullying">Bullying</option>
+             <option value="technology">Technology</option>
+             <option value="science">Science</option>
+             <option value="dyslexia">Dyslexia</option>
+             <option value="alternate">Alternate History</option>
+             <option value="paris">Paris</option>
+             <option value="revolution">French Revolution</option>
+             <option value="war">War</option>
+             <option value="crime">Crime</option>
+             <option value="graphic">Graphic Novel</option>
+             <option value="war">World War II</option>
+             <option value="war">World War I</option>
+             <option value="time">Time Travel</option>
+             <option value="music">Music</option>
+             <option value="jazz">Jazz</option>
+             <option value="cancer">Cancer</option>
+             <option value="zombies">Zombies</option>
+             <option value="road">Road Trip</option>
+             <option value="addiction">Addiction</option>
+             <option value="astrology">Astrology</option>
+             <option value="irish">Irish Travellers</option>
+             <option value="death">Death</option>
+             <option value="depression">Depression</option>
+
+
+
+
+
+
            </select>
     </div>
 
@@ -87,7 +133,7 @@
         <hr>
 
         <div>
-          <button ng-click="count = count + 10">MORE RESULTS</button>
+          <button class="browse-btn" ng-click="count = count + 10">MORE RESULTS</button>
         </div>
         
         
