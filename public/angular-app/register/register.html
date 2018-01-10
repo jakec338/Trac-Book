@@ -11,14 +11,9 @@
 
 
 
-<form ng-hide="vmForm.message" ng-submit="vmForm.register()" ng-controller="RegisterController as vmForm">
-    <div ng-if="vmForm.message" class="alert alert-success" role="alert">
-        <p>{{ vm.message }}</p>
-      </div>
+<form ng-submit="vmForm.register()" ng-controller="RegisterController as vmForm">
       
-      <div ng-if="vmForm.error" class="alert alert-danger" role="alert">
-        {{ vm.error }}
-      </div>
+      
 
     <div ng-switch="vmForm.step">
     <div class="stepone" ng-switch-when="one" >
@@ -79,6 +74,10 @@
         <br>
         <button type="button" class="btn-primary"  ng-click="vmForm.stepTwo()" >Back</button>
         <button type="submit" class="btn-primary" >Submit</button>
+        <br>
+        <div ng-if="vmForm.error" class="alert alert-danger" role="alert">
+            {{ vmForm.error }}
+          </div>
         <hr>
     </div>
     </div>
