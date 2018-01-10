@@ -63,6 +63,13 @@ function config($httpProvider, $routeProvider) {
       }
     })
 
+    .when('/about', {
+      templateUrl: 'angular-app/about/about.html',
+      access:{
+        restricted: false
+      }
+    })
+
     .otherwise({
       redirectTo: '/'
     });

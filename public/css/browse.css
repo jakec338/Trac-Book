@@ -20,7 +20,7 @@
 
 }
 
-.browse-btn{ width:100%; border:0;border-radius:40px;background:#0D47A1;background:-webkit-linear-gradient(left,#1A237E,#0E66AF,#1976D2);background:-o-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:-moz-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:linear-gradient(to right,#1A237E,#0E66AF,#1976D2)}
+.browse-btn{ color:white; width:100%; border:0;border-radius:40px;background:#0D47A1;background:-webkit-linear-gradient(left,#1A237E,#0E66AF,#1976D2);background:-o-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:-moz-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:linear-gradient(to right,#1A237E,#0E66AF,#1976D2)}
 .browse-btn:hover{color:white; box-shadow:0 0 10px #0D47A1;cursor:pointer}
 
 /* Dropdown Button */
