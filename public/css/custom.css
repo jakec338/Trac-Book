@@ -164,3 +164,7 @@ body {
   height: 300px;
   width: 200px
 }
+
+p.warning {
+  margin-top: -5px;
+}

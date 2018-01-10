@@ -2,7 +2,7 @@
     font-family: 'Muli';
 }
 
-.btn-primary{ border:0;border-radius:40px;background:#0D47A1;background:-webkit-linear-gradient(left,#1A237E,#0E66AF,#1976D2);background:-o-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:-moz-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:linear-gradient(to right,#1A237E,#0E66AF,#1976D2)}
+.btn-primary{ color: white; border:0;border-radius:40px;background:#0D47A1;background:-webkit-linear-gradient(left,#1A237E,#0E66AF,#1976D2);background:-o-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:-moz-linear-gradient(right,#1A237E,#0E66AF,#1976D2);background:linear-gradient(to right,#1A237E,#0E66AF,#1976D2)}
 .btn-primary:hover{color:white; box-shadow:0 0 10px #0D47A1;cursor:pointer}
 
 h3{
@@ -24,6 +24,12 @@ select{
     font-style: italic;
 }
 
+.info2{
+    color: rgb(141, 140, 140);
+    font-size: 13px;
+    font-style: italic;
+}
+
 ol{
     background-color: #f4f8ff;
 }
@@ -34,4 +40,10 @@ ol{
     font-family: 'Muli';
     text-shadow: 1px 0px 2px rgb(163, 162, 162);
 }
+
+a{
+    display: block;
+    font-size: 20px; 
+}
+
 

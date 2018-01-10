@@ -24,11 +24,11 @@
         <i> {{ vm.book.Description }}</i>
         <br>
         <br>
-        <b>Genre: </b>
+        <b ng-if="vm.book.Genre" >Genre: </b>
         <b class="btn btn-outline-secondary" ng-repeat="genre in vm.book.Genre">{{ genre }} </b>
         <br>
         <br>
-        <b>Tags: </b>
+        <b ng-if="vm.book.Tags">Tags: </b>
         <b class="btn btn-outline-secondary" ng-repeat="tag in vm.book.Tags">{{ tag }} </b>
         <br>
         <br>

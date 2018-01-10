@@ -116,14 +116,14 @@
                 <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
                 <h5> {{ book.Author }}</h5>
                 <p > {{ book.Description }}</p>
-                  <b>Genre: </b>
+                  <b ng-if="book.Genre">Genre: </b>
                   <a class="btn btn-outline-secondary" ng-repeat="genre in book.Genre" ng-click="vm.genreSearch(genre)"> {{ genre }} </a>
                   <br><br>
-                  <b>Tags: </b>
+                  <b ng-if="book.Tags">Tags: </b>
                   <a class="btn btn-outline-secondary" ng-repeat="tag in book.Tags" ng-click="vm.tagsSearch(tag)"> {{ tag }} </a>
                 <br><br>
                 <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
-          
+              <br><br>
           </div>
          
         </div>

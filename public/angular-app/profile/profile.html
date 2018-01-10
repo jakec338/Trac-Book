@@ -38,6 +38,8 @@
   <hr> -->
 
   <h3 class="text-center">MY READING LIST</h3>
+  <a class="text-center" href="#!/browse">BROWSE</a>
+  <p class="text-center" style="font-size: 11.5px; font-style: italic;">TO ADD BOOKS TO YOUR READING LIST</p>
   <div ng-repeat="myBook in vm.User.bookList">
   <div class="row" ng-repeat="book in vm.books | filter : {Title: myBook}: true | limitTo: 5" id="testBook">
         
@@ -58,7 +60,7 @@
                 <a class="btn btn-outline-secondary" ng-repeat="tag in book.Tags" ng-click="vm.tagsSearch(tag)"> {{ tag }} </a>
               <br><br>
               <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
-        
+        <br>
         </div>
        
       </div>
