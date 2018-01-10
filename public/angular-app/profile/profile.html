@@ -37,9 +37,14 @@
     </ul>
   <hr> -->
 
+  <div>
+      <button class="browse-btn" ng-click="vm.switch()" ng-init="lim=4"> {{ vm.switchList }}</button>
+  </div>
+
+  <div ng-if="vm.showUserList">
   <h3 class="text-center">MY READING LIST</h3>
   <div ng-repeat="myBook in vm.User.bookList">
-  <div class="row" ng-repeat="book in vm.books | filter : {Title: myBook}: true | limitTo: 5" id="testBook">
+  <div class="row" ng-repeat="book in vm.books | filter : {Title: myBook}: true" id="testBook">
         
       <div class="col-md-3" style="background-color:#e2ecfd;">
         <br> 
@@ -62,6 +67,34 @@
         </div>
        
       </div>
+    </div>
+  </div>
+
+    <div ng-if="!vm.showUserList">
+    <h3 class="text-center" >Suggested Books</h3>
+    <div class="row" ng-repeat="book in vm.books | filter : {Tags: vm.randTag}: true | limitTo: 5" id="testBook">
+          
+        <div class="col-md-3" style="background-color:#e2ecfd;">
+          <br> 
+          <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
+        </div>
+  
+            <div class="col-md-9">
+              <hr>
+                <h3> {{ book.Title }} {{ data.singleSelect }}</h3>
+                <h5> {{ book.Author }} </h5>
+                <p > {{ book.Description }}</p>
+                  <b>Genre: </b>
+                  <a class="btn btn-outline-secondary" ng-repeat="genre in book.Genre" ng-click="vm.genreSearch(genre)"> {{ genre }} </a>
+                  <br><br>
+                  <b>Tags: </b>
+                  <a class="btn btn-outline-secondary" ng-repeat="tag in book.Tags" ng-click="vm.tagsSearch(tag)"> {{ tag }} </a>
+                <br><br>
+                <a class="browse-btn" ng-href="#!/book/{{ book._id }}">View Details</a>
+          
+          </div>
+         
+        </div>
     </div>
 
   </div>

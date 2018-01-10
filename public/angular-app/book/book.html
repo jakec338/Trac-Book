@@ -33,10 +33,12 @@
         <br>
         <br>
 
+
         <i ng-if="vm.book.Warnings" class="fa fa-exclamation" style="font-size:24px; float: left; margin-top: -5px; color:#ff8566;"></i>
-        <p class="warning">
-          <i>{{vm.book.Warnings}}</i>
+        <p class="btn btn-outline-warn" ng-repeat="warn in vm.book.Warnings">
+          <i>{{ warn }}</i>
         </p>
+        <br>
 
         <a class="browse-btn" href={{vm.book.AmazonUK}} target="_blank">Amazon</a>
         <br>
