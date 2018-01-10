@@ -33,8 +33,8 @@ function RegisterController($http, $window, AuthFactory, $rootScope) {
         genres: vm.genres
       };
   
-      if (!vm.email || !vm.username || !vm.password) {
-        vm.error = 'Please add valid email, username and password.';
+      if (!vm.email || !vm.username || !vm.password || !vm.age || !vm.genres) {
+        vm.error = 'Please add valid email, username, password and complete information about age and genres.';
       } else {
         if (vm.password !== vm.passwordRepeat) {
           vm.error = 'Please make sure the passwords match.';
