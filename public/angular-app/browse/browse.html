@@ -105,7 +105,7 @@
     <!-- IF NO RESULTS SHOW 'NO RESULTS'-->
         
         <div class="row" ng-repeat="book in vm.books | filter : {Tags: vm.tagSearch, Genre: vm.genSearch, Author: author.search, Title: title.search} | limitTo: count"  id="testBook">
-        
+        <h5 ng-if="book == null"></h5>
         <div class="col-md-3" style="background-color:#e2ecfd;">
           <br> 
           <center><img class="img-fluid cover" src="../images/Bookcovers/{{ book.Cover }}" alt=""></center>
@@ -126,8 +126,9 @@
               <br><br>
           </div>
          
-        </div>
-         
+        </div> 
+        
+        
     </div>
         
         <hr>
